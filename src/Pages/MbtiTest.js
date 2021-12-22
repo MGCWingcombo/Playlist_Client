@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import axios from 'axios';
-import Btn from './Btn';
+import React from 'react';
+import Btn from '../Components/Btn';
 
 const MbtiTest = () => {
 
