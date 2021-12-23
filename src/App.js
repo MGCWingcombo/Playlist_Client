@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./Pages/Home";
 import "./App.css";
 import Addlist from "./Pages/Addlist/Addlist";
+import Endmbti from "./Pages/Endmbti";
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/*" element={<Home />} />
-          <Route path="mbtiAdd" element={<Addlist />} />
-          <Route path="mbti/*" element={<MbtiTest />} />
+          <Route path="Addmbti" element={<Addlist />} />
+          <Route path="mbti" element={<MbtiTest />} />
+          <Route path="Addmbti/Endmbti" element={<Endmbti />} />
         </Routes>
       </BrowserRouter>
     </div>
