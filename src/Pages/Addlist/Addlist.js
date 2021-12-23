@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import * as S from "./Style";
 import SideMbti from "../../Components/SideMbti/SideMbti";
+import { useNavigate } from "react-router-dom";
+import Endmbti from "../Endmbti/Endmbti";
 
 // const mbtiData = [
 //   {
@@ -13,36 +14,11 @@ import SideMbti from "../../Components/SideMbti/SideMbti";
 //   },
 // ];
 
-const Addlist = ({ id }) => {
-  const [mbtis, setMbtis] = useState(null);
-  const [error, setError] = useState(null);
-
-  const holder = async () => {
-    try {
-      setError(null);
-      setMbtis(null);
-      await axios
-        .get("https://jsonplaceholder.typicode.com/posts?_start=0&_end=5", {
-          params: {
-            id: id,
-          },
-        })
-        .then((res) => {
-          setMbtis(res.data);
-          console.log("성공");
-        })
-        .catch((err) => {
-          console.log("실패");
-          setError(err);
-          throw err;
-        });
-    } catch (e) {
-      return <div>에러가 발생했습니다.</div>;
-    }
-  };
-
-  var keys = JSON.stringify(mbtis, ["id", "title"], 2);
-
+const Addlist = ({ mbti }) => {
+  const navigate = useNavigate();
+  function navigateClick() {
+    navigate("./Addmbti/Endmbti", { id: 1 });
+  }
   return (
     <>
       <S.Content>
@@ -55,21 +31,30 @@ const Addlist = ({ id }) => {
             <div>당신을 위한 플레이리스트는</div>
           </S.Ment>
           <S.backImage>
-            <img className="img" src={require("../../assets/mbtiImg.png")} />
-            <span>ID : {id}</span>
+            <img
+              className="img"
+              src={require("../../assets/mbtiImg.png")}
+              alt="mbtibackimg"
+            />
+            <span>{mbti}</span>
           </S.backImage>
-          <Link to="Endmbti">
-            <S.Btn>내 플레이리스트에 추가하기</S.Btn>
+          <Link to="./Endmbti">
+            <Endmbti onClick={navigateClick}>
+              내 플레이리스트에 추가하기
+            </Endmbti>
           </Link>
         </S.Contents>
         <div className="right">
           <SideMbti />
         </div>
-
-        {mbtis && <p>{keys}</p>}
       </S.Content>
     </>
   );
 };
-
+// {() => {
+//   navigate({
+//     pathname: "./Addmbti/Endmbti",
+//     state: { id: 1 },
+//   });
+// }}
 export default Addlist;

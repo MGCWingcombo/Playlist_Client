@@ -1,10 +1,10 @@
 import React from "react";
 import MbtiTest from "./Pages/MbtiTest";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import "./App.css";
 import Addlist from "./Pages/Addlist/Addlist";
-import Endmbti from "./Pages/Endmbti";
+import Endmbti from "./Pages/Endmbti/Endmbti";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/*" element={<Home />} />
           <Route path="Addmbti" element={<Addlist />} />
-          <Route path="mbti" element={<MbtiTest />} />
+          <Route path="mbti-test" element={<MbtiTest />} />
           <Route path="Addmbti/Endmbti" element={<Endmbti />} />
         </Routes>
       </BrowserRouter>

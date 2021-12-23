@@ -7,16 +7,16 @@ const Home = () => {
     <div>
       <h1>Home입니다.</h1>
       <button>
-        <Link to="mbti">Mbti 1 </Link>
+        <Link to="mbti-test">Mbti 1 </Link>
       </button>
       <button>
-        <Link to="mbti">Mbti 2</Link>
+        <Link to="mbti-test">Mbti 2</Link>
       </button>
       <button>
-        <Link to="mbti">Mbti 3</Link>
+        <Link to="mbti-test">Mbti 3</Link>
       </button>
 
-      <Link to="Addmbti">playlist 추가</Link>
+      <Link to="Addmbti">enfp playlist 추가</Link>
     </div>
   );
 };
