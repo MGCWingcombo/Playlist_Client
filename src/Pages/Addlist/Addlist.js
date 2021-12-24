@@ -17,7 +17,7 @@ import Endmbti from "../Endmbti/Endmbti";
 const Addlist = ({ mbti }) => {
   const navigate = useNavigate();
   function navigateClick() {
-    navigate("./Addmbti/Endmbti", { id: 1 });
+    navigate("/Addmbti/Endmbti", { state: { id: 2 } });
   }
   return (
     <>
@@ -38,11 +38,9 @@ const Addlist = ({ mbti }) => {
             />
             <span>{mbti}</span>
           </S.backImage>
-          <Link to="./Endmbti">
-            <Endmbti onClick={navigateClick}>
-              내 플레이리스트에 추가하기
-            </Endmbti>
-          </Link>
+          <div onClick={navigateClick}>
+            <Endmbti />
+          </div>
         </S.Contents>
         <div className="right">
           <SideMbti />

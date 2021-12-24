@@ -3,22 +3,24 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import * as S from "./Style";
 
-const Endmbti = ({ iddd }) => {
+const Endmbti = ({ id }) => {
   const [mbtis, setMbtis] = useState(null);
   const [error, setError] = useState(null);
 
   const location = useLocation();
-  console.log(location);
+  // const props = location.state.id;
 
   useEffect(() => {
     const holder = async () => {
       try {
         setError(null);
         setMbtis(null);
+        const props = location.state.id;
+        console.log(location.state.id);
         await axios
           .get("https://jsonplaceholder.typicode.com/posts?_start=0&_end=5", {
             params: {
-              id: 1,
+              id: props,
             },
           })
           .then((res) => {
@@ -45,7 +47,7 @@ const Endmbti = ({ iddd }) => {
       {/* <div>{mbtis && <textarea rows={7} value={keys} readOnly={true} />}</div>
        */}
       <S.Btn>내 플레이리스트에 추가하기</S.Btn>
-      {/* <h1>{keys}</h1> */}
+      <h1>{keys}</h1>
     </>
   );
 };
