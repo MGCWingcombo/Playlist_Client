@@ -3,20 +3,20 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import * as S from "./Style";
 
-const Endmbti = ({ id }) => {
+const Endmbti = () => {
   const [mbtis, setMbtis] = useState(null);
   const [error, setError] = useState(null);
 
   const location = useLocation();
-  // const props = location.state.id;
+  const props = location.state.id;
 
   useEffect(() => {
     const holder = async () => {
       try {
         setError(null);
         setMbtis(null);
-        const props = location.state.id;
-        console.log(location.state.id);
+
+        console.log(props);
         await axios
           .get("https://jsonplaceholder.typicode.com/posts?_start=0&_end=5", {
             params: {
@@ -40,16 +40,23 @@ const Endmbti = ({ id }) => {
     holder();
   }, []);
 
-  var keys = JSON.stringify(mbtis, ["id", "title"], 2);
+  var keys = JSON.stringify(mbtis, ["id", "title"], 3);
 
   return (
     <>
       {/* <div>{mbtis && <textarea rows={7} value={keys} readOnly={true} />}</div>
        */}
-      <S.Btn>내 플레이리스트에 추가하기</S.Btn>
+      {/* <S.Btn id="listBtn">내 플레이리스트에 추가하기</S.Btn> */}
       <h1>{keys}</h1>
     </>
   );
 };
 
 export default Endmbti;
+
+// function show() {
+//   if (keys == null) {
+//     // document.getElementById("listBtn").style.display = "none";
+//     console.log("hi");
+//   }
+// }

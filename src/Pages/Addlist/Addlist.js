@@ -1,20 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import * as S from "./Style";
 import SideMbti from "../../Components/SideMbti/SideMbti";
 import { useNavigate } from "react-router-dom";
-import Endmbti from "../Endmbti/Endmbti";
+import { useLocation } from "react-router-dom";
+// import Endmbti from "../Endmbti/Endmbti";
 
-// const mbtiData = [
-//   {
-//     mbti: "enfp",
-//   },
-//   {
-//     mbti: "infp",
-//   },
-// ];
-
-const Addlist = ({ mbti }) => {
+const Addlist = ({}) => {
+  // const [first, setFirst] = useState(props);
+  // const location = useLocation();
+  // const props = location.state;
+  // console.log(location);
   const navigate = useNavigate();
   function navigateClick() {
     navigate("/Addmbti/Endmbti", { state: { id: 2 } });
@@ -36,10 +31,10 @@ const Addlist = ({ mbti }) => {
               src={require("../../assets/mbtiImg.png")}
               alt="mbtibackimg"
             />
-            <span>{mbti}</span>
+            <span>id : </span>
           </S.backImage>
           <div onClick={navigateClick}>
-            <Endmbti />
+            <S.Btn>내 플레이리스트에 추가하기</S.Btn>
           </div>
         </S.Contents>
         <div className="right">
