@@ -6,13 +6,13 @@ import { useLocation } from "react-router-dom";
 // import Endmbti from "../Endmbti/Endmbti";
 
 const Addlist = ({}) => {
-  // const [first, setFirst] = useState(props);
-  // const location = useLocation();
-  // const props = location.state;
-  // console.log(location);
+  const [first, setFirst] = useState(null);
+  const location = useLocation();
+
+  console.log(location.state.id);
   const navigate = useNavigate();
   function navigateClick() {
-    navigate("/Addmbti/Endmbti", { state: { id: 2 } });
+    navigate("/Addmbti/Endmbti", { state: { id: location.state.id } });
   }
   return (
     <>
@@ -31,7 +31,7 @@ const Addlist = ({}) => {
               src={require("../../assets/mbtiImg.png")}
               alt="mbtibackimg"
             />
-            <span>id : </span>
+            <span>id : {first}</span>
           </S.backImage>
           <div onClick={navigateClick}>
             <S.Btn>내 플레이리스트에 추가하기</S.Btn>
@@ -44,10 +44,4 @@ const Addlist = ({}) => {
     </>
   );
 };
-// {() => {
-//   navigate({
-//     pathname: "./Addmbti/Endmbti",
-//     state: { id: 1 },
-//   });
-// }}
 export default Addlist;

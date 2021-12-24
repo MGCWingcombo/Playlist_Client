@@ -44,9 +44,6 @@ const Endmbti = () => {
 
   return (
     <>
-      {/* <div>{mbtis && <textarea rows={7} value={keys} readOnly={true} />}</div>
-       */}
-      {/* <S.Btn id="listBtn">내 플레이리스트에 추가하기</S.Btn> */}
       <h1>{keys}</h1>
     </>
   );

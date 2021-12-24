@@ -19,10 +19,8 @@ const Home = () => {
         <Link to="mbti-test">Mbti 2</Link>
       </button>
       <div onClick={navigateClick}>
-        <button>Mbti 3</button>
+        <button>enfp playlist 추가</button>
       </div>
-
-      <Link to="Addmbti">enfp playlist 추가</Link>
     </div>
   );
 };
