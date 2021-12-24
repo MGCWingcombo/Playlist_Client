@@ -5,21 +5,32 @@ import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
+
   function navigateClick() {
+    navigate("/Addmbti", { state: { id: 1 } });
+  }
+  function navigateClick2() {
+    navigate("/Addmbti", { state: { id: 2 } });
+  }
+  function navigateClick3() {
     navigate("/Addmbti", { state: { id: 3 } });
+  }
+  function onAir() {
+    console.log("hi");
   }
 
   return (
     <div>
-      <h1>Home입니다.</h1>
-      <button>
-        <Link to="mbti-test">Mbti 1 </Link>
+      <h1 onClick={onAir}>Home입니다.</h1>
+
+      <button onClick={navigateClick}>
+        <div>enfp playlist 추가 id 1</div>
       </button>
-      <button>
-        <Link to="mbti-test">Mbti 2</Link>
+      <button onClick={navigateClick2}>
+        <div>enfp playlist 추가 id 2</div>
       </button>
-      <div onClick={navigateClick}>
-        <button>enfp playlist 추가</button>
+      <div onClick={navigateClick3}>
+        <button>enfp playlist 추가 id 3</button>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import * as S from "./Style";
 import SideMbti from "../../Components/SideMbti/SideMbti";
 import { useNavigate } from "react-router-dom";
@@ -6,7 +6,6 @@ import { useLocation } from "react-router-dom";
 // import Endmbti from "../Endmbti/Endmbti";
 
 const Addlist = ({}) => {
-  const [first, setFirst] = useState(null);
   const location = useLocation();
 
   console.log(location.state.id);
@@ -31,7 +30,7 @@ const Addlist = ({}) => {
               src={require("../../assets/mbtiImg.png")}
               alt="mbtibackimg"
             />
-            <span>id : {first}</span>
+            <span>id : {location.state.id}</span>
           </S.backImage>
           <div onClick={navigateClick}>
             <S.Btn>내 플레이리스트에 추가하기</S.Btn>
