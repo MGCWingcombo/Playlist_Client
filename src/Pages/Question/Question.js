@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import * as S from "./Style";
+
 const Question = () => {
+  const [number, setNumber] = useState(1);
+
+  const nextCount = () => {
+    setNumber((nextNumber) => nextNumber + 1);
+  };
+
   return (
     <>
       <S.Content>
         <S.Top>
-          <S.Number>Q1.</S.Number>
-          <S.Count>1 / 12</S.Count>
+          <S.Number>Q{number}.</S.Number>
+          <S.Count>{number} / 12</S.Count>
         </S.Top>
 
         <S.Questions>
@@ -15,6 +22,7 @@ const Question = () => {
 
         <S.Btns>
           <S.ChoiceBtn
+            onClick={nextCount}
             className="topbtn"
             fontcolor="#ffffff"
             btncolor="#6578a7"

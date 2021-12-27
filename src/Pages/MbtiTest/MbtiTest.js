@@ -1,7 +1,14 @@
 import React from "react";
 import * as S from "./Style";
 import SideMbti from "../../Components/SideMbti/SideMbti";
+import { useNavigate } from "react-router-dom";
+
 const MbtiTest = () => {
+  const navigate = useNavigate();
+  function navigateClick() {
+    navigate("/mbti-test/question");
+  }
+
   return (
     <>
       <S.Content>
@@ -21,7 +28,9 @@ const MbtiTest = () => {
               alt="teststartimg"
             />
           </S.backImage>
-          <S.Btn>나와 맞는 플레이리스트 찾으러 가기</S.Btn>
+          <div onClick={navigateClick}>
+            <S.Btn>나와 맞는 플레이리스트 찾으러 가기</S.Btn>
+          </div>
         </S.Contents>
         <div className="right">
           <SideMbti />
