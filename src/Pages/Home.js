@@ -10,7 +10,7 @@ const Home = ({ id }) => {
 
   return (
     <div>
-      <button onClick={navigateClick}>enfp playlist 추가 {id}</button>
+      <button onClick={navigateClick}>playlist 추가 {id}</button>
     </div>
   );
 };
