@@ -1,12 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import * as S from "./Style";
+
+function nextText() {}
 
 const Question = () => {
   const [number, setNumber] = useState(1);
+  const [text, setText] = useState(
+    "오랜만에 찾아온 휴일, 당신이 원하는 휴식 방법은?"
+  );
+  const ShowState = useMemo(() => nextText(number), [number]);
 
   const nextCount = () => {
     setNumber((nextNumber) => nextNumber + 1);
   };
+
+  //   function ques() {
+  //     switch (number) {
+  //       case 1:
+  //         setQuestion("오랜만에 찾아온 휴일, 당신이 원하는 휴식 방법은?");
+  //         break;
+  //       case 2:
+  //         setQuestion("파티에 참석한 당신이 위치한 곳은?");
+  //         break;
+  //       default:
+  //         console.log("hi");
+  //     }
+  //   }
 
   return (
     <>
@@ -16,9 +35,7 @@ const Question = () => {
           <S.Count>{number} / 12</S.Count>
         </S.Top>
 
-        <S.Questions>
-          오랜만에 찾아온 휴일, 당신이 원하는 휴식 방법은?
-        </S.Questions>
+        <S.Questions>{ShowState}</S.Questions>
 
         <S.Btns>
           <S.ChoiceBtn
@@ -31,6 +48,7 @@ const Question = () => {
             집에서 혼자만의 시간을 가진다.
           </S.ChoiceBtn>
           <S.ChoiceBtn
+            onClick={nextCount}
             className="bottomBtn"
             fontcolor="#000000"
             btncolor="#ffffff"
