@@ -43,7 +43,7 @@ function nextText(number) {
       return "보름달이 떴다는 친구의 전화를 받은 나의 반응은?";
     }
     default: {
-      return "hi";
+      return null;
     }
   }
 }
@@ -81,7 +81,7 @@ const Question = () => {
         <S.Questions>{ShowState}</S.Questions>
 
         <S.Btns onClick={nextCount}>
-          <ChoiceBtn />
+          <ChoiceBtn number={number} />
         </S.Btns>
       </S.Content>
     </>
