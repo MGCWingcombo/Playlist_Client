@@ -11,5 +11,4 @@ export const ChoiceBtn = styled.button`
   color: ${(p) => p.fontcolor || null};
   background: ${(p) => p.btncolor || null};
   border-color: ${(p) => p.bordercolor || null};
-  margin-top: 25px;
 `;

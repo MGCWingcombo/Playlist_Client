@@ -104,6 +104,10 @@ function BtnText(number) {
 //     }
 //   }
 // }
+let A = 0;
+let B = 0;
+let C = 0;
+let D = 0;
 
 const ChoiceBtn = ({ number }) => {
   const TextBtntop = useMemo(() => BtnText(number), [number]);
@@ -111,18 +115,19 @@ const ChoiceBtn = ({ number }) => {
   //   const MBTIdcd = useMemo(() => Mbtis(number), [number]);
 
   const [alpha, setAlpha] = useState(null);
-  setTimeout(() => setAlpha(1));
+  setTimeout(() => setAlpha(number));
 
-  const topBtnid = document.getElementById("topbtn");
-  const bottomBtnid = document.getElementById("bottombtn");
-  function click() {
-    if (topBtnid) {
-      console.log("hi");
-    } else if (bottomBtnid) {
-      console.log("bye");
+  function click(btnid) {
+    const btnids = btnid.target.id;
+
+    if (btnids == "topbtn") {
+      A = A + 1;
+      console.log(A);
+    } else if (btnids == "bottombtn") {
+      A -= 1;
+      console.log(A);
     }
   }
-
   return (
     <>
       <S.ChoiceBtn

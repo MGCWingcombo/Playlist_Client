@@ -39,7 +39,9 @@ export const Questions = styled.div`
 export const Btns = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   margin-bottom: 400px;
+  height: 150px;
 `;
 
 // export const ChoiceBtn = styled.button`
