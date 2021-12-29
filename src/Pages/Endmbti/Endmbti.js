@@ -8,7 +8,7 @@ const Endmbti = () => {
   const [error, setError] = useState(null);
 
   const location = useLocation();
-  const props = location.state.id;
+  const props = location.state.mbti;
 
   useEffect(() => {
     const holder = async () => {

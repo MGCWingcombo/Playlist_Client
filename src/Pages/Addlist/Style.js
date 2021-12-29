@@ -17,6 +17,10 @@ export const Contents = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  .btn {
+    height: 60px;
+    margin-bottom: 300px;
+  }
 `;
 
 export const Ment = styled.div`

@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import * as S from "./TextBtnStyle";
 
 function BtnText2(number) {
@@ -116,9 +117,12 @@ let C = 0;
 let D = 0;
 
 const ChoiceBtn = ({ number }) => {
+  const location = useLocation();
+  console.log(location);
+
   const navigate = useNavigate();
   function navigateClick() {
-    navigate("/mbti-test/result", { state: { mbti: "enfp" } });
+    navigate("/mbti-test/result", { state: { mbti: "1" } });
   }
 
   const TextBtntop = useMemo(() => BtnText(number), [number]);
@@ -267,7 +271,6 @@ const ChoiceBtn = ({ number }) => {
         bordercolor="#6578a7"
       >
         {TextBtntop}
-        {alpha}
       </S.ChoiceBtn>
       <S.ChoiceBtn
         onClick={click}

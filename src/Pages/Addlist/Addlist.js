@@ -8,10 +8,10 @@ import { useLocation } from "react-router-dom";
 const Addlist = ({}) => {
   const location = useLocation();
 
-  console.log(location.state.id);
+  console.log(location.state.mbti);
   const navigate = useNavigate();
   function navigateClick() {
-    navigate("/Addmbti/Endmbti", { state: { id: location.state.id } });
+    navigate("/Addmbti/Endmbti", { state: { mbti: location.state.mbti } });
   }
   return (
     <>
@@ -32,7 +32,7 @@ const Addlist = ({}) => {
             />
             <span>{location.state.mbti}</span>
           </S.backImage>
-          <div onClick={navigateClick}>
+          <div className="btn" onClick={navigateClick}>
             <S.Btn>내 플레이리스트에 추가하기</S.Btn>
           </div>
         </S.Contents>
