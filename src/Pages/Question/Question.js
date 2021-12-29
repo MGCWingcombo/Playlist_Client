@@ -3,7 +3,6 @@ import ChoiceBtn from "./TextBtn/ChoiceBtn";
 import * as S from "./Style";
 
 function nextText(number) {
-  console.log(number);
   switch (number) {
     case 1: {
       return "오랜만에 찾아온 휴일, 당신이 원하는 휴식 방법은?";

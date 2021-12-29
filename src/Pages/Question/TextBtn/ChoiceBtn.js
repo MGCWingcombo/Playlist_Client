@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+
 import * as S from "./TextBtnStyle";
 
 function BtnText2(number) {
@@ -46,7 +47,6 @@ function BtnText2(number) {
 }
 
 function BtnText(number) {
-  console.log(number);
   switch (number) {
     case 1: {
       return "집에서 혼자만의 시간을 가진다.";
@@ -90,13 +90,45 @@ function BtnText(number) {
   }
 }
 
+// function Mbtis(number) {
+//   let A = 0;
+//   let B = 0;
+//   let C = 0;
+//   let D = 0;
+
+//   switch (number) {
+//     case 1: {
+//     }
+//     default: {
+//       return console.log(A);
+//     }
+//   }
+// }
+
 const ChoiceBtn = ({ number }) => {
   const TextBtntop = useMemo(() => BtnText(number), [number]);
   const TextBtnbottom = useMemo(() => BtnText2(number), [number]);
+  //   const MBTIdcd = useMemo(() => Mbtis(number), [number]);
+
+  const [alpha, setAlpha] = useState(null);
+  setTimeout(() => setAlpha(1));
+
+  const topBtnid = document.getElementById("topbtn");
+  const bottomBtnid = document.getElementById("bottombtn");
+  function click() {
+    if (topBtnid) {
+      console.log("hi");
+    } else if (bottomBtnid) {
+      console.log("bye");
+    }
+  }
+
   return (
     <>
       <S.ChoiceBtn
-        className="topbtn"
+        onClick={click}
+        id="topbtn"
+        value="topbtn"
         fontcolor="#ffffff"
         btncolor="#6578a7"
         bordercolor="#6578a7"
@@ -104,7 +136,9 @@ const ChoiceBtn = ({ number }) => {
         {TextBtntop}
       </S.ChoiceBtn>
       <S.ChoiceBtn
-        className="bottomBtn"
+        onClick={click}
+        id="bottombtn"
+        value="bottombtn"
         fontcolor="#000000"
         btncolor="#ffffff"
         bordercolor="#c4c4c4"
