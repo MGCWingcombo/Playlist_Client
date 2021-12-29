@@ -30,7 +30,7 @@ const Addlist = ({}) => {
               src={require("../../assets/mbtiImg.png")}
               alt="mbtibackimg"
             />
-            <span>id : {location.state.id}</span>
+            <span>{location.state.mbti}</span>
           </S.backImage>
           <div onClick={navigateClick}>
             <S.Btn>내 플레이리스트에 추가하기</S.Btn>

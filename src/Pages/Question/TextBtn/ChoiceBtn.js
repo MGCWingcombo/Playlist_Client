@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-
+import { useNavigate } from "react-router-dom";
 import * as S from "./TextBtnStyle";
 
 function BtnText2(number) {
@@ -116,6 +116,11 @@ let C = 0;
 let D = 0;
 
 const ChoiceBtn = ({ number }) => {
+  const navigate = useNavigate();
+  function navigateClick() {
+    navigate("/mbti-test/result", { state: { mbti: "enfp" } });
+  }
+
   const TextBtntop = useMemo(() => BtnText(number), [number]);
   const TextBtnbottom = useMemo(() => BtnText2(number), [number]);
   //   const Mbtidcd = useMemo(() => click(number), [number]);
@@ -128,21 +133,17 @@ const ChoiceBtn = ({ number }) => {
     setTimeout(() => setAlpha(number));
 
     if (btnids == "topbtn") {
-      console.log(alpha);
       switch (alpha) {
         case 1: {
           A += 1;
-          console.log("hi1");
           break;
         }
         case 2: {
           A += 1;
-          console.log("hi2");
           break;
         }
         case 3: {
           B += 1;
-          console.log("hi3");
           break;
         }
         case 4: {
@@ -179,6 +180,7 @@ const ChoiceBtn = ({ number }) => {
         }
         case 12: {
           D += 1;
+          navigateClick();
           console.log("A = ", A);
           console.log("B = ", B);
           console.log("C = ", C);
@@ -240,6 +242,7 @@ const ChoiceBtn = ({ number }) => {
         }
         case 12: {
           D -= 1;
+          navigateClick();
           console.log("A = ", A);
           console.log("B = ", B);
           console.log("C = ", C);
