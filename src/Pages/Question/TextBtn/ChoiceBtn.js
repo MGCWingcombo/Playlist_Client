@@ -90,14 +90,20 @@ function BtnText(number) {
   }
 }
 
-// function Mbtis(number) {
-//   let A = 0;
-//   let B = 0;
-//   let C = 0;
-//   let D = 0;
-
+// function mbtiDecide(number) {
 //   switch (number) {
 //     case 1: {
+//       function click(btnid) {
+//         const btnids = btnid.target.id;
+
+//         if (btnids == "topbtn") {
+//           A = A + 1;
+//           console.log(A);
+//         } else if (btnids == "bottombtn") {
+//           A -= 1;
+//           console.log(A);
+//         }
+//       }
 //     }
 //     default: {
 //       return console.log(A);
@@ -112,22 +118,141 @@ let D = 0;
 const ChoiceBtn = ({ number }) => {
   const TextBtntop = useMemo(() => BtnText(number), [number]);
   const TextBtnbottom = useMemo(() => BtnText2(number), [number]);
-  //   const MBTIdcd = useMemo(() => Mbtis(number), [number]);
-
+  //   const Mbtidcd = useMemo(() => click(number), [number]);
   const [alpha, setAlpha] = useState(null);
   setTimeout(() => setAlpha(number));
 
   function click(btnid) {
     const btnids = btnid.target.id;
 
+    setTimeout(() => setAlpha(number));
+
     if (btnids == "topbtn") {
-      A = A + 1;
-      console.log(A);
+      console.log(alpha);
+      switch (alpha) {
+        case 1: {
+          A += 1;
+          console.log("hi1");
+          break;
+        }
+        case 2: {
+          A += 1;
+          console.log("hi2");
+          break;
+        }
+        case 3: {
+          B += 1;
+          console.log("hi3");
+          break;
+        }
+        case 4: {
+          C += 1;
+          break;
+        }
+        case 5: {
+          D += 1;
+          break;
+        }
+        case 6: {
+          B += 1;
+          break;
+        }
+        case 7: {
+          C += 1;
+          break;
+        }
+        case 8: {
+          B += 1;
+          break;
+        }
+        case 9: {
+          D += 1;
+          break;
+        }
+        case 10: {
+          A += 1;
+          break;
+        }
+        case 11: {
+          C += 1;
+          break;
+        }
+        case 12: {
+          D += 1;
+          console.log("A = ", A);
+          console.log("B = ", B);
+          console.log("C = ", C);
+          console.log("D = ", D);
+          break;
+        }
+        default: {
+          return null;
+        }
+      }
     } else if (btnids == "bottombtn") {
-      A -= 1;
-      console.log(A);
+      switch (alpha) {
+        case 1: {
+          A -= 1;
+          console.log("hi1");
+          break;
+        }
+        case 2: {
+          A -= 1;
+          console.log("hi2");
+          break;
+        }
+        case 3: {
+          B -= 1;
+          console.log("hi3");
+          break;
+        }
+        case 4: {
+          C -= 1;
+          break;
+        }
+        case 5: {
+          D -= 1;
+          break;
+        }
+        case 6: {
+          B -= 1;
+          break;
+        }
+        case 7: {
+          C -= 1;
+          break;
+        }
+        case 8: {
+          B -= 1;
+          break;
+        }
+        case 9: {
+          D -= 1;
+          break;
+        }
+        case 10: {
+          A -= 1;
+          break;
+        }
+        case 11: {
+          C -= 1;
+          break;
+        }
+        case 12: {
+          D -= 1;
+          console.log("A = ", A);
+          console.log("B = ", B);
+          console.log("C = ", C);
+          console.log("D = ", D);
+          break;
+        }
+        default: {
+          return null;
+        }
+      }
     }
   }
+
   return (
     <>
       <S.ChoiceBtn
@@ -139,6 +264,7 @@ const ChoiceBtn = ({ number }) => {
         bordercolor="#6578a7"
       >
         {TextBtntop}
+        {alpha}
       </S.ChoiceBtn>
       <S.ChoiceBtn
         onClick={click}
@@ -155,3 +281,15 @@ const ChoiceBtn = ({ number }) => {
 };
 
 export default ChoiceBtn;
+
+// function click(btnid) {
+//     const btnids = btnid.target.id;
+
+//     if (btnids == "topbtn") {
+//       A = A + 1;
+//       console.log(A);
+//     } else if (btnids == "bottombtn") {
+//       A -= 1;
+//       console.log(A);
+//     }
+//   }
