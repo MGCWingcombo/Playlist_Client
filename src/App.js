@@ -13,11 +13,10 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/*" element={<MBTI_btn />} />
-          <Route path="mbti-test" element={<MbtiTest />} />
-          <Route path="Addmbti/Endmbti" element={<Endmbti />} />
-          <Route path="mbti-test/question" element={<Question />} />
-          <Route path="mbti-test/result" element={<Addlist />} />
+          <Route path="/" element={<MbtiTest />} />
+          <Route path="mbti-test" element={<Question />} />
+          <Route path="recommend-list" element={<Endmbti />} />
+          <Route path="mbti-result" element={<Addlist />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -101,7 +101,7 @@ const ChoiceBtn = ({ number }) => {
 
   const navigate = useNavigate();
   function navigateClick(mbtiword) {
-    navigate("/mbti-test/result", { state: { mbti: mbtiword } });
+    navigate("/mbti-result", { state: { mbti: mbtiword } });
   }
 
   const TextBtntop = useMemo(() => BtnText(number), [number]);

@@ -11,7 +11,7 @@ const Addlist = ({}) => {
   console.log(location.state.mbti);
   const navigate = useNavigate();
   function navigateClick() {
-    navigate("/Addmbti/Endmbti", { state: { mbti: location.state.mbti } });
+    navigate("/recommend-list", { state: { mbti: location.state.mbti } });
   }
   return (
     <>
