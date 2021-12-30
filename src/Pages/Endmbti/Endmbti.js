@@ -36,7 +36,7 @@ const Endmbti = () => {
     holder();
   }, []);
 
-  var keys = JSON.stringify(mbtis, ["id", "title"], 3);
+  let keys = JSON.stringify(mbtis, ["id", "title"], 3);
 
   return (
     <>
