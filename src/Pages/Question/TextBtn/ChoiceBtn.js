@@ -91,26 +91,6 @@ function BtnText(number) {
   }
 }
 
-// function mbtiDecide(number) {
-//   switch (number) {
-//     case 1: {
-//       function click(btnid) {
-//         const btnids = btnid.target.id;
-
-//         if (btnids == "topbtn") {
-//           A = A + 1;
-//           console.log(A);
-//         } else if (btnids == "bottombtn") {
-//           A -= 1;
-//           console.log(A);
-//         }
-//       }
-//     }
-//     default: {
-//       return console.log(A);
-//     }
-//   }
-// }
 let A = 0;
 let B = 0;
 let C = 0;
@@ -122,13 +102,19 @@ const ChoiceBtn = ({ number }) => {
 
   const navigate = useNavigate();
   function navigateClick() {
-    navigate("/mbti-test/result", { state: { mbti: "1" } });
+    navigate("/mbti-test/result", { state: { mbti: mbtiword } });
   }
 
   const TextBtntop = useMemo(() => BtnText(number), [number]);
   const TextBtnbottom = useMemo(() => BtnText2(number), [number]);
-  //   const Mbtidcd = useMemo(() => click(number), [number]);
   const [alpha, setAlpha] = useState(null);
+  const [mbtiword, setMbtiword] = useState("");
+
+  function mbtiset(mbti) {
+    console.log(mbti[0]);
+    setMbtiword(mbti[0]);
+  }
+
   setTimeout(() => setAlpha(number));
 
   function click(btnid) {
@@ -143,7 +129,7 @@ const ChoiceBtn = ({ number }) => {
           break;
         }
         case 2: {
-          A += 1;
+          A -= 1;
           break;
         }
         case 3: {
@@ -167,7 +153,7 @@ const ChoiceBtn = ({ number }) => {
           break;
         }
         case 8: {
-          B += 1;
+          B -= 1;
           break;
         }
         case 9: {
@@ -184,11 +170,36 @@ const ChoiceBtn = ({ number }) => {
         }
         case 12: {
           D += 1;
+
+          if (A >= 1) {
+            A = "I";
+          } else if (A <= -1) {
+            A = "E";
+          }
+          if (B >= 1) {
+            B = "N";
+          } else if (B <= -1) {
+            B = "S";
+          }
+          if (C >= 1) {
+            C = "F";
+          } else if (C <= -1) {
+            C = "T";
+          }
+          if (D >= 1) {
+            D = "J";
+          } else if (D <= -1) {
+            D = "P";
+          }
+          const mbti = [A + B + C + D];
+          mbtiset(mbti);
+
           navigateClick();
           console.log("A = ", A);
           console.log("B = ", B);
           console.log("C = ", C);
           console.log("D = ", D);
+
           break;
         }
         default: {
@@ -199,17 +210,14 @@ const ChoiceBtn = ({ number }) => {
       switch (alpha) {
         case 1: {
           A -= 1;
-          console.log("hi1");
           break;
         }
         case 2: {
-          A -= 1;
-          console.log("hi2");
+          A += 1;
           break;
         }
         case 3: {
           B -= 1;
-          console.log("hi3");
           break;
         }
         case 4: {
@@ -229,7 +237,7 @@ const ChoiceBtn = ({ number }) => {
           break;
         }
         case 8: {
-          B -= 1;
+          B += 1;
           break;
         }
         case 9: {
@@ -246,6 +254,30 @@ const ChoiceBtn = ({ number }) => {
         }
         case 12: {
           D -= 1;
+
+          if (A >= 1) {
+            A = "I";
+          } else if (A <= -1) {
+            A = "E";
+          }
+          if (B >= 1) {
+            B = "N";
+          } else if (B <= -1) {
+            B = "S";
+          }
+          if (C >= 1) {
+            C = "F";
+          } else if (C <= -1) {
+            C = "T";
+          }
+          if (D >= 1) {
+            D = "J";
+          } else if (D <= -1) {
+            D = "P";
+          }
+          const mbti = [A + B + C + D];
+          mbtiset(mbti);
+
           navigateClick();
           console.log("A = ", A);
           console.log("B = ", B);
@@ -287,15 +319,3 @@ const ChoiceBtn = ({ number }) => {
 };
 
 export default ChoiceBtn;
-
-// function click(btnid) {
-//     const btnids = btnid.target.id;
-
-//     if (btnids == "topbtn") {
-//       A = A + 1;
-//       console.log(A);
-//     } else if (btnids == "bottombtn") {
-//       A -= 1;
-//       console.log(A);
-//     }
-//   }
