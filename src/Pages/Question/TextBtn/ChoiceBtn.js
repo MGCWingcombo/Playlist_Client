@@ -185,8 +185,8 @@ const ChoiceBtn = ({ number }) => {
             D = "P";
           }
           const mbti = [A + B + C + D];
-
-          navigateClick(mbti);
+          console.log(mbti[0]);
+          navigateClick(mbti[0]);
 
           console.log("A = ", A);
           console.log("B = ", B);
