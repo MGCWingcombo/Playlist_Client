@@ -101,19 +101,13 @@ const ChoiceBtn = ({ number }) => {
   console.log(location);
 
   const navigate = useNavigate();
-  function navigateClick() {
+  function navigateClick(mbtiword) {
     navigate("/mbti-test/result", { state: { mbti: mbtiword } });
   }
 
   const TextBtntop = useMemo(() => BtnText(number), [number]);
   const TextBtnbottom = useMemo(() => BtnText2(number), [number]);
   const [alpha, setAlpha] = useState(null);
-  const [mbtiword, setMbtiword] = useState("");
-
-  function mbtiset(mbti) {
-    console.log(mbti[0]);
-    setMbtiword(mbti[0]);
-  }
 
   setTimeout(() => setAlpha(number));
 
@@ -192,14 +186,13 @@ const ChoiceBtn = ({ number }) => {
             D = "P";
           }
           const mbti = [A + B + C + D];
-          mbtiset(mbti);
 
-          navigateClick();
+          navigateClick(mbti);
+
           console.log("A = ", A);
           console.log("B = ", B);
           console.log("C = ", C);
           console.log("D = ", D);
-
           break;
         }
         default: {
@@ -276,9 +269,8 @@ const ChoiceBtn = ({ number }) => {
             D = "P";
           }
           const mbti = [A + B + C + D];
-          mbtiset(mbti);
 
-          navigateClick();
+          navigateClick(mbti);
           console.log("A = ", A);
           console.log("B = ", B);
           console.log("C = ", C);
