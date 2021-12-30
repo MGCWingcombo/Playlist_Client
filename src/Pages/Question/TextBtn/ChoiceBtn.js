@@ -98,7 +98,6 @@ let D = 0;
 
 const ChoiceBtn = ({ number }) => {
   const location = useLocation();
-  console.log(location);
 
   const navigate = useNavigate();
   function navigateClick(mbtiword) {
@@ -286,26 +285,30 @@ const ChoiceBtn = ({ number }) => {
 
   return (
     <>
-      <S.ChoiceBtn
-        onClick={click}
-        id="topbtn"
-        value="topbtn"
-        fontcolor="#ffffff"
-        btncolor="#6578a7"
-        bordercolor="#6578a7"
-      >
-        {TextBtntop}
-      </S.ChoiceBtn>
-      <S.ChoiceBtn
-        onClick={click}
-        id="bottombtn"
-        value="bottombtn"
-        fontcolor="#000000"
-        btncolor="#ffffff"
-        bordercolor="#c4c4c4"
-      >
-        {TextBtnbottom}
-      </S.ChoiceBtn>
+      <S.Div>
+        <S.ChoiceBtn
+          onClick={click}
+          id="topbtn"
+          value="topbtn"
+          fontcolor="#ffffff"
+          btncolor="#6578a7"
+          bordercolor="#6578a7"
+        >
+          {TextBtntop}
+        </S.ChoiceBtn>
+      </S.Div>
+      <S.Div>
+        <S.ChoiceBtn
+          onClick={click}
+          id="bottombtn"
+          value="bottombtn"
+          fontcolor="#000000"
+          btncolor="#ffffff"
+          bordercolor="#c4c4c4"
+        >
+          {TextBtnbottom}
+        </S.ChoiceBtn>
+      </S.Div>
     </>
   );
 };

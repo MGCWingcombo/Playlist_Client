@@ -12,3 +12,7 @@ export const ChoiceBtn = styled.button`
   background: ${(p) => p.btncolor || null};
   border-color: ${(p) => p.bordercolor || null};
 `;
+
+export const Div = styled.div`
+  padding-bottom: 10px;
+`;

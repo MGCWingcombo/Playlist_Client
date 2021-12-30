@@ -18,11 +18,7 @@ const Endmbti = () => {
 
         console.log(props);
         await axios
-          .get("https://jsonplaceholder.typicode.com/posts?_start=0&_end=5", {
-            params: {
-              id: props,
-            },
-          })
+          .get(`http://localhost:8080/playlist/${props}`)
           .then((res) => {
             setMbtis(res.data);
             console.log("성공");
@@ -50,10 +46,3 @@ const Endmbti = () => {
 };
 
 export default Endmbti;
-
-// function show() {
-//   if (keys == null) {
-//     // document.getElementById("listBtn").style.display = "none";
-//     console.log("hi");
-//   }
-// }

@@ -56,19 +56,6 @@ const Question = () => {
     setNumber((nextNumber) => nextNumber + 1);
   };
 
-  //   function ques() {
-  //     switch (number) {
-  //       case 1:
-  //         setQuestion("오랜만에 찾아온 휴일, 당신이 원하는 휴식 방법은?");
-  //         break;
-  //       case 2:
-  //         setQuestion("파티에 참석한 당신이 위치한 곳은?");
-  //         break;
-  //       default:
-  //         console.log("hi");
-  //     }
-  //   }
-
   return (
     <>
       <S.Content>
