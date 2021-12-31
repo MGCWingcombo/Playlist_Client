@@ -21,19 +21,17 @@ const Endmbti = () => {
         setError(null);
 
         console.log(props);
-        await axios
+        const res = await axios
           .get("https://jsonplaceholder.typicode.com/posts?_start=0&_end=5")
-          .then((res) => {
-            let data = res.data;
-            console.log(data);
-            mbtilist(data);
-            console.log("성공");
-          })
           .catch((err) => {
             console.log("실패");
             setError(err);
             throw err;
           });
+        const data = res.data;
+        console.log(data);
+
+        mbtilist(data);
       } catch (e) {
         if (error) return <div>에러가 발생했습니다.</div>;
       }
@@ -41,6 +39,7 @@ const Endmbti = () => {
 
     holder();
   }, []);
+  console.log("hihihi");
 
   return (
     <>
