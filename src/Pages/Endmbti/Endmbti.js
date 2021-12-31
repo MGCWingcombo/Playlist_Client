@@ -2,13 +2,15 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 import * as S from "./Style";
+import Card from "./Card/Card";
 
 const Endmbti = () => {
   const [mbtis, setMbtis] = useState(null);
   const [error, setError] = useState(null);
 
   const location = useLocation();
-  const props = location.state.mbti;
+  // const props = location.state.mbti;
+  const props = 1;
 
   useEffect(() => {
     const holder = async () => {
@@ -18,9 +20,10 @@ const Endmbti = () => {
 
         console.log(props);
         await axios
-          .get(`http://localhost:8080/playlist/${props}`)
+          .get("https://jsonplaceholder.typicode.com/posts?_start=0&_end=5")
           .then((res) => {
             setMbtis(res.data);
+            console.log(res.data);
             console.log("성공");
           })
           .catch((err) => {
@@ -40,10 +43,11 @@ const Endmbti = () => {
 
   return (
     <>
-      <h1>{keys}</h1>
-      <S.Card></S.Card>
+      <Card keys={keys}></Card>
     </>
   );
 };
 
 export default Endmbti;
+
+//.get(`http://localhost:8080/playlist/${props}`)
