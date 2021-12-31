@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+export const Contents = styled.div``;
+
 export const Card = styled.div`
   width: 300px;
   height: 350px;

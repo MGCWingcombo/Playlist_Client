@@ -4,10 +4,11 @@ import * as S from "./Style";
 const Card = ({ keys }) => {
   return (
     <>
-      <S.Card>{keys}</S.Card>
-      <S.Card />
-      <S.Card />
-      <S.Card />
+      <S.Card>
+        id : {keys.id}
+        <br />
+        title : {keys.title}
+      </S.Card>
     </>
   );
 };
