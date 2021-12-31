@@ -5,25 +5,28 @@ import * as S from "./Style";
 import Card from "./Card/Card";
 
 const Endmbti = () => {
-  const [mbtis, setMbtis] = useState(null);
   const [error, setError] = useState(null);
 
   const location = useLocation();
-  // const props = location.state.mbti;
-  const props = 1;
+  const props = location.state.mbti;
+
+  const mbtilist = (data) => {
+    const datalist = data.filter((아무말) => 아무말.id === props);
+    console.log(datalist);
+  };
 
   useEffect(() => {
     const holder = async () => {
       try {
         setError(null);
-        setMbtis(null);
 
         console.log(props);
         await axios
           .get("https://jsonplaceholder.typicode.com/posts?_start=0&_end=5")
           .then((res) => {
-            setMbtis(res.data);
-            console.log(res.data);
+            let data = res.data;
+            console.log(data);
+            mbtilist(data);
             console.log("성공");
           })
           .catch((err) => {
@@ -39,15 +42,30 @@ const Endmbti = () => {
     holder();
   }, []);
 
-  let keys = JSON.stringify(mbtis, ["id", "title"], 3);
-
   return (
     <>
-      <Card keys={keys}></Card>
+      {/* <table>
+        <tbody>
+          {datalist.map((data) => (
+            <tr key={data.id}>
+              <td>{data.title}</td>
+              <td>{data.body}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table> */}
     </>
   );
 };
 
 export default Endmbti;
+
+// let test = JSON.stringify(mbtis, ["id", "title"], 3);
+
+// <Card keys={list.id}></Card>
+
+// {mbtilist.map((props) => (
+//   <Card keys={props.title}></Card>
+// ))}
 
 //.get(`http://localhost:8080/playlist/${props}`)
