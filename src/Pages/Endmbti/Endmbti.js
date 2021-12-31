@@ -41,6 +41,7 @@ const Endmbti = () => {
   return (
     <>
       <h1>{keys}</h1>
+      <S.Card></S.Card>
     </>
   );
 };
