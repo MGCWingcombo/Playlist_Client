@@ -5,17 +5,9 @@ import * as S from "./Style";
 import Card from "./Card/Card";
 
 const Endmbti = () => {
-  const [mbtis, setMbtis] = useState();
+  const [mbtis, setMbtis] = useState("");
   const location = useLocation();
   const props = location.state.mbti;
-
-  // const mbtilist = (data) => {
-  //   setMbtis(data);
-  //   console.log(mbtis);
-  //   // const datalist = data.filter((아무말) => 아무말.id === props);
-  //   // console.log(datalist);
-  //   // return datalist;
-  // };
 
   useEffect(() => {
     const holder = async () => {
@@ -26,6 +18,8 @@ const Endmbti = () => {
         );
         console.log(res.data);
         setMbtis(res.data);
+        // setTimeout(() => setMbtis(res.data));
+        // mbtilist();
       } catch (error) {
         console.error(error);
       }
@@ -34,11 +28,19 @@ const Endmbti = () => {
     holder();
   }, []);
 
+  function mbtilist() {
+    console.log("mbti : ", mbtis);
+    const mbti4 = mbtis.filter((아무말) => 아무말.id <= 4);
+    console.log("mbti4 : ", mbti4);
+  }
+
   return (
     <>
       <h1>hi</h1>
-
-      {mbtis && mbtis.map((mbti) => <Card key={mbti.id} keys={mbti} />)}
+      {mbtis && mbtilist()}
+      <S.Contents>
+        {mbtis && mbtis.map((mbti) => <Card key={mbti.id} keys={mbti} />)}
+      </S.Contents>
     </>
   );
 };
