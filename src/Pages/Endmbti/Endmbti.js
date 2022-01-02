@@ -13,11 +13,10 @@ const Endmbti = () => {
     const holder = async () => {
       try {
         console.log(props);
-        const res = await axios(
-          "https://jsonplaceholder.typicode.com/posts?_start=0&_end=12"
-        );
-        console.log(res.data);
-        setMbtis(res.data);
+        const res = await axios(`http://localhost:8080/playlist/${props}`);
+        // console.log(res.data.data[0]);
+        // console.log(res.data.data[0].Artist);
+        setMbtis(res.data.data);
       } catch (error) {
         console.error(error);
       }
@@ -34,25 +33,33 @@ const Endmbti = () => {
 
   return (
     <>
-      <S.Ment>{props}를 위한 플레이리스트</S.Ment>
-      {/* {mbtis && mbtilist()}
-      <S.Contents>
-        {mbtis && mbtis.map((mbti) => <Card key={mbti.id} keys={mbti} />)}
-      </S.Contents> */}
-      <S.Content>
-        <S.Contents>
-          {mbtis && <Card keys={mbtis[0]} />}
-          {mbtis && <Card keys={mbtis[1]} />}
-          {mbtis && <Card keys={mbtis[2]} />}
-          {mbtis && <Card keys={mbtis[3]} />}
-        </S.Contents>
-        <S.Contents>
-          {mbtis && <Card keys={mbtis[4]} />}
-          {mbtis && <Card keys={mbtis[5]} />}
-          {mbtis && <Card keys={mbtis[6]} />}
-          {mbtis && <Card keys={mbtis[7]} />}
-        </S.Contents>
-      </S.Content>
+      <S.All>
+        <S.Sidebar>
+          <ul>
+            <li>MENU</li>
+            <li>Home</li>
+            <li>PlayList</li>
+          </ul>
+        </S.Sidebar>
+        <S.Content>
+          <S.Ment>{props}를 위한 플레이리스트</S.Ment>
+          <S.Contents>
+            {mbtis && <Card keys={mbtis[0]} />}
+            {mbtis && <Card keys={mbtis[1]} />}
+            {mbtis && <Card keys={mbtis[2]} />}
+            {mbtis && <Card keys={mbtis[3]} />}
+          </S.Contents>
+          <S.Contents>
+            {mbtis && <Card keys={mbtis[4]} />}
+            {mbtis && <Card keys={mbtis[5]} />}
+            {mbtis && <Card keys={mbtis[6]} />}
+            {mbtis && <Card keys={mbtis[7]} />}
+          </S.Contents>
+        </S.Content>
+        <S.Sidebar>
+          <p>My PlayList</p>
+        </S.Sidebar>
+      </S.All>
     </>
   );
 };

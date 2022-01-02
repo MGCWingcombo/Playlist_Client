@@ -5,9 +5,13 @@ const Card = ({ keys }) => {
   return (
     <>
       <S.Card>
-        id : {keys.id}
+        Artist : {keys.Artist}
         <br />
-        title : {keys.title}
+        Music_title : {keys.Music}
+        <br />
+        <a href={keys.url} target="_blank">
+          url : {keys.url}
+        </a>
       </S.Card>
     </>
   );
