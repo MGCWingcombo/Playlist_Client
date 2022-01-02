@@ -14,12 +14,10 @@ const Endmbti = () => {
       try {
         console.log(props);
         const res = await axios(
-          "https://jsonplaceholder.typicode.com/posts?_start=0&_end=5"
+          "https://jsonplaceholder.typicode.com/posts?_start=0&_end=12"
         );
         console.log(res.data);
         setMbtis(res.data);
-        // setTimeout(() => setMbtis(res.data));
-        // mbtilist();
       } catch (error) {
         console.error(error);
       }
@@ -28,19 +26,33 @@ const Endmbti = () => {
     holder();
   }, []);
 
-  function mbtilist() {
-    console.log("mbti : ", mbtis);
-    const mbti4 = mbtis.filter((아무말) => 아무말.id <= 4);
-    console.log("mbti4 : ", mbti4);
-  }
+  // function mbtilist() {
+  //   console.log("mbti : ", mbtis);
+  //   const mbti4 = mbtis.filter((아무말) => 아무말.id <= 4);
+  //   console.log("mbti4 : ", mbti4);
+  // }
 
   return (
     <>
-      <h1>hi</h1>
-      {mbtis && mbtilist()}
+      <S.Ment>{props}를 위한 플레이리스트</S.Ment>
+      {/* {mbtis && mbtilist()}
       <S.Contents>
         {mbtis && mbtis.map((mbti) => <Card key={mbti.id} keys={mbti} />)}
-      </S.Contents>
+      </S.Contents> */}
+      <S.Content>
+        <S.Contents>
+          {mbtis && <Card keys={mbtis[0]} />}
+          {mbtis && <Card keys={mbtis[1]} />}
+          {mbtis && <Card keys={mbtis[2]} />}
+          {mbtis && <Card keys={mbtis[3]} />}
+        </S.Contents>
+        <S.Contents>
+          {mbtis && <Card keys={mbtis[4]} />}
+          {mbtis && <Card keys={mbtis[5]} />}
+          {mbtis && <Card keys={mbtis[6]} />}
+          {mbtis && <Card keys={mbtis[7]} />}
+        </S.Contents>
+      </S.Content>
     </>
   );
 };
