@@ -55,7 +55,16 @@ export const Contents = styled.div`
   div {
     display: flex;
   }
-  .third-data {
+  .first_data {
+    display: none;
+  }
+  .second_data {
+    display: none;
+  }
+  .third_data {
+    display: none;
+  }
+  .force_data {
     display: none;
   }
 `;

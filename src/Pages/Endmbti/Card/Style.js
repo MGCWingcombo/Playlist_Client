@@ -12,6 +12,7 @@ export const Card = styled.div`
 `;
 
 export const Img = styled.div`
+  display: block;
   div {
     background-image: url("https://img.youtube.com/vi/UaaivA6ElmI/mqdefault.jpg");
     width: 270px;
