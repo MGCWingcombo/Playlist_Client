@@ -9,10 +9,8 @@ const Card = ({ keys }) => {
           <S.Img>
             <div></div>
           </S.Img>
-          <br />
-          Artist : {keys.Artist}
-          <br />
-          Music_title : {keys.Music}
+          <p className="Artist">{keys.Artist}</p>
+          <p className="Music">{keys.Music}</p>
         </a>
       </S.Card>
     </>
