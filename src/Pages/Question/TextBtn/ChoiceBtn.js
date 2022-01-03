@@ -91,10 +91,10 @@ function BtnText(number) {
   }
 }
 
-let A = 0;
-let B = 0;
-let C = 0;
-let D = 0;
+let IE = 0;
+let NS = 0;
+let FT = 0;
+let JP = 0;
 
 const ChoiceBtn = ({ number }) => {
   const location = useLocation();
@@ -118,80 +118,80 @@ const ChoiceBtn = ({ number }) => {
     if (btnids == "topbtn") {
       switch (alpha) {
         case 1: {
-          A += 1;
+          IE += 1;
           break;
         }
         case 2: {
-          A -= 1;
+          IE -= 1;
           break;
         }
         case 3: {
-          B += 1;
+          NS += 1;
           break;
         }
         case 4: {
-          C += 1;
+          JP += 1;
           break;
         }
         case 5: {
-          D += 1;
+          FT += 1;
           break;
         }
         case 6: {
-          B += 1;
+          NS += 1;
           break;
         }
         case 7: {
-          C += 1;
+          JP += 1;
           break;
         }
         case 8: {
-          B -= 1;
+          NS -= 1;
           break;
         }
         case 9: {
-          D += 1;
+          FT += 1;
           break;
         }
         case 10: {
-          A += 1;
+          IE += 1;
           break;
         }
         case 11: {
-          C += 1;
+          JP += 1;
           break;
         }
         case 12: {
-          D += 1;
+          FT += 1;
 
-          if (A >= 1) {
-            A = "I";
-          } else if (A <= -1) {
-            A = "E";
+          if (IE >= 1) {
+            IE = "I";
+          } else if (IE <= -1) {
+            IE = "E";
           }
-          if (B >= 1) {
-            B = "N";
-          } else if (B <= -1) {
-            B = "S";
+          if (NS >= 1) {
+            NS = "N";
+          } else if (NS <= -1) {
+            NS = "S";
           }
-          if (C >= 1) {
-            C = "F";
-          } else if (C <= -1) {
-            C = "T";
+          if (FT >= 1) {
+            FT = "F";
+          } else if (FT <= -1) {
+            FT = "T";
           }
-          if (D >= 1) {
-            D = "J";
-          } else if (D <= -1) {
-            D = "P";
+          if (JP >= 1) {
+            JP = "J";
+          } else if (JP <= -1) {
+            JP = "P";
           }
-          const mbti = [A + B + C + D];
+          const mbti = [IE + NS + FT + JP];
           console.log(mbti[0]);
           navigateClick(mbti[0]);
 
-          console.log("A = ", A);
-          console.log("B = ", B);
-          console.log("C = ", C);
-          console.log("D = ", D);
+          console.log("A = ", IE);
+          console.log("B = ", NS);
+          console.log("C = ", FT);
+          console.log("D = ", JP);
           break;
         }
         default: {
@@ -201,79 +201,79 @@ const ChoiceBtn = ({ number }) => {
     } else if (btnids == "bottombtn") {
       switch (alpha) {
         case 1: {
-          A -= 1;
+          IE -= 1;
           break;
         }
         case 2: {
-          A += 1;
+          IE += 1;
           break;
         }
         case 3: {
-          B -= 1;
+          NS -= 1;
           break;
         }
         case 4: {
-          C -= 1;
+          JP -= 1;
           break;
         }
         case 5: {
-          D -= 1;
+          FT -= 1;
           break;
         }
         case 6: {
-          B -= 1;
+          NS -= 1;
           break;
         }
         case 7: {
-          C -= 1;
+          JP -= 1;
           break;
         }
         case 8: {
-          B += 1;
+          NS += 1;
           break;
         }
         case 9: {
-          D -= 1;
+          FT -= 1;
           break;
         }
         case 10: {
-          A -= 1;
+          IE -= 1;
           break;
         }
         case 11: {
-          C -= 1;
+          JP -= 1;
           break;
         }
         case 12: {
-          D -= 1;
+          FT -= 1;
 
-          if (A >= 1) {
-            A = "I";
-          } else if (A <= -1) {
-            A = "E";
+          if (IE >= 1) {
+            IE = "I";
+          } else if (IE <= -1) {
+            IE = "E";
           }
-          if (B >= 1) {
-            B = "N";
-          } else if (B <= -1) {
-            B = "S";
+          if (NS >= 1) {
+            NS = "N";
+          } else if (NS <= -1) {
+            NS = "S";
           }
-          if (C >= 1) {
-            C = "F";
-          } else if (C <= -1) {
-            C = "T";
+          if (FT >= 1) {
+            FT = "F";
+          } else if (FT <= -1) {
+            FT = "T";
           }
-          if (D >= 1) {
-            D = "J";
-          } else if (D <= -1) {
-            D = "P";
+          if (JP >= 1) {
+            JP = "J";
+          } else if (JP <= -1) {
+            JP = "P";
           }
-          const mbti = [A + B + C + D];
+          const mbti = [IE + NS + FT + JP];
 
           navigateClick(mbti);
-          console.log("A = ", A);
-          console.log("B = ", B);
-          console.log("C = ", C);
-          console.log("D = ", D);
+          console.log("A = ", IE);
+          console.log("B = ", NS);
+          console.log("C = ", FT);
+          console.log("D = ", JP);
           break;
         }
         default: {

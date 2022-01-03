@@ -14,11 +14,6 @@ const Endmbti = () => {
     const holder = async () => {
       try {
         const res = await axios(`http://3.19.174.2:8080/playlist/${props}`);
-        console.log(res.data.data[0].url);
-        // for (let i = 0; i < 10; i++) {
-        //   console.log(res.data.data[0].url[i]);
-        // }
-
         setMbtis(res.data.data);
       } catch (error) {
         console.error(error);
@@ -40,16 +35,16 @@ const Endmbti = () => {
     const data4 = document.getElementById("force_data");
     switch (number) {
       case 1:
-        data1.style.display = data1.style.display != "none" ? "flex" : "none";
+        data1.style.display = data1.style.display !== "none" ? "flex" : "none";
         break;
       case 2:
-        data2.style.display = data2.style.display != "none" ? "flex" : "none";
+        data2.style.display = data2.style.display !== "none" ? "flex" : "none";
         break;
       case 3:
-        data3.style.display = data3.style.display != "none" ? "flex" : "none";
+        data3.style.display = data3.style.display !== "none" ? "flex" : "none";
         break;
       case 4:
-        data4.style.display = data4.style.display != "none" ? "flex" : "none";
+        data4.style.display = data4.style.display !== "none" ? "flex" : "none";
         break;
       default:
         return null;
@@ -124,18 +119,3 @@ const Endmbti = () => {
 };
 
 export default Endmbti;
-
-// {mbtilist.map((props) => (
-//   <Card keys={props.title}></Card>
-// ))}
-
-{
-  /* <ul>
-        {mbtis &&
-          mbtis.map((mbti) => (
-            <li key={mbti.id}>
-              {mbti.title} ({mbti.body})
-            </li>
-          ))}
-      </ul> */
-}
