@@ -5,12 +5,14 @@ const Card = ({ keys }) => {
   return (
     <>
       <S.Card>
-        Artist : {keys.Artist}
-        <br />
-        Music_title : {keys.Music}
-        <br />
         <a href={keys.url} target="_blank">
-          url : {keys.url}
+          <S.Img>
+            <div></div>
+          </S.Img>
+          <br />
+          Artist : {keys.Artist}
+          <br />
+          Music_title : {keys.Music}
         </a>
       </S.Card>
     </>

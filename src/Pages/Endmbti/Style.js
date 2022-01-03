@@ -2,23 +2,47 @@ import styled from "styled-components";
 
 export const All = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  margin-top: 90px;
 `;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
 `;
 
-export const Sidebar = styled.section``;
+export const Top = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const Data = styled.div`
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 780px;
+`;
+
+export const Button = styled.button`
+  font-family: "Prompt";
+  color: #ffffff;
+  background: #6578a7;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 90px;
+  height: 40px;
+  margin-top: 70px;
+  margin-right: 30px;
+  border-radius: 10px;
+  border: 1px solid #6578a7;
+  cursor: pointer;
+`;
 
 export const Ment = styled.p`
   font-family: "Prompt";
   font-size: 1.9rem;
   font-weight: 500;
   color: #6c6f8c;
-  text-align: left;
+  margin-left: 50px;
 `;
 
 export const Btn = styled.button`
@@ -28,5 +52,10 @@ export const Btn = styled.button`
 `;
 
 export const Contents = styled.div`
-  display: flex;
+  div {
+    display: flex;
+  }
+  .third-data {
+    display: none;
+  }
 `;

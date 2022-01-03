@@ -25,40 +25,47 @@ const Endmbti = () => {
     holder();
   }, []);
 
-  // function mbtilist() {
-  //   console.log("mbti : ", mbtis);
-  //   const mbti4 = mbtis.filter((아무말) => 아무말.id <= 4);
-  //   console.log("mbti4 : ", mbti4);
-  // }
+  function dataplus() {
+    console.log("hi");
+    const data3 = document.getElementsByClassName("third-data");
+    data3.style.display = data3.style.display != "none" ? "none" : "block";
+  }
 
   return (
     <>
       <S.All>
-        <S.Sidebar>
-          <ul>
-            <li>MENU</li>
-            <li>Home</li>
-            <li>PlayList</li>
-          </ul>
-        </S.Sidebar>
         <S.Content>
-          <S.Ment>{props}를 위한 플레이리스트</S.Ment>
-          <S.Contents>
-            {mbtis && <Card keys={mbtis[0]} />}
-            {mbtis && <Card keys={mbtis[1]} />}
-            {mbtis && <Card keys={mbtis[2]} />}
-            {mbtis && <Card keys={mbtis[3]} />}
-          </S.Contents>
-          <S.Contents>
-            {mbtis && <Card keys={mbtis[4]} />}
-            {mbtis && <Card keys={mbtis[5]} />}
-            {mbtis && <Card keys={mbtis[6]} />}
-            {mbtis && <Card keys={mbtis[7]} />}
-          </S.Contents>
+          <S.Top>
+            <S.Ment>{props}를 위한 플레이리스트</S.Ment>
+            <S.Button onClick={dataplus}>더보기</S.Button>
+          </S.Top>
+          <S.Data>
+            <S.Contents>
+              <div>
+                {mbtis && <Card keys={mbtis[0]} />}
+                {mbtis && <Card keys={mbtis[1]} />}
+                {mbtis && <Card keys={mbtis[2]} />}
+                {mbtis && <Card keys={mbtis[3]} />}
+              </div>
+            </S.Contents>
+            <S.Contents>
+              <div>
+                {mbtis && <Card keys={mbtis[4]} />}
+                {mbtis && <Card keys={mbtis[5]} />}
+                {mbtis && <Card keys={mbtis[6]} />}
+                {mbtis && <Card keys={mbtis[7]} />}
+              </div>
+            </S.Contents>
+            <S.Contents>
+              <div className="third-data">
+                {mbtis && <Card keys={mbtis[8]} />}
+                {mbtis && <Card keys={mbtis[9]} />}
+                {mbtis && <Card keys={mbtis[10]} />}
+                {mbtis && <Card keys={mbtis[11]} />}
+              </div>
+            </S.Contents>
+          </S.Data>
         </S.Content>
-        <S.Sidebar>
-          <p>My PlayList</p>
-        </S.Sidebar>
       </S.All>
     </>
   );
