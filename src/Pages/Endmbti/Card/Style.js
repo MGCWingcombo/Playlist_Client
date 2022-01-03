@@ -36,9 +36,9 @@ export const Img = styled.div`
     background-image: url("${(p) => p.url || null}");
     //background-image: url("https://img.youtube.com/vi/UaaivA6ElmI/0.jpg");
     width: 200px;
-    height: 200px;
+    height: 190px;
     border-radius: 25px;
-    background-size: 200px 200px;
+    background-size: 200px 190px;
     background-repeat: no-repeat;
   }
 `;
