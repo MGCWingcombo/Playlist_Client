@@ -14,7 +14,7 @@ const Endmbti = () => {
     const holder = async () => {
       try {
         console.log(props);
-        const res = await axios(`http://localhost:8080/playlist/${props}`);
+        const res = await axios(`http://3.19.174.2:8080/playlist/${props}`);
         // console.log(res.data.data[0]);
         // console.log(res.data.data[0].Artist);
         setMbtis(res.data.data);
@@ -25,6 +25,8 @@ const Endmbti = () => {
 
     holder();
   }, []);
+
+  //http://localhost:8080/playlist/
   //http://3.19.174.2:8080/playlist/
   // const [number, setNumber] = useState(1);
 
@@ -111,7 +113,9 @@ const Endmbti = () => {
               </div>
             </S.Contents>
           </S.Data>
-          <S.Btn>MBTI 테스트 다시하기</S.Btn>
+          <a className="btn" href="/">
+            <S.Btn>MBTI 테스트 다시하기</S.Btn>
+          </a>
         </S.Content>
       </S.All>
     </>

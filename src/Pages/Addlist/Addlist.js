@@ -3,7 +3,6 @@ import * as S from "./Style";
 import SideMbti from "../../Components/SideMbti/SideMbti";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-// import Endmbti from "../Endmbti/Endmbti";
 
 const Addlist = ({}) => {
   const location = useLocation();
@@ -12,7 +11,6 @@ const Addlist = ({}) => {
   const navigate = useNavigate();
   function navigateClick() {
     navigate("/recommend-list", { state: { mbti: location.state.mbti } });
-    // navigate("/recommend-list", { state: { mbti: 1 } });
   }
   return (
     <>

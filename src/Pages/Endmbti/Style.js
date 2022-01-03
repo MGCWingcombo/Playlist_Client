@@ -9,6 +9,9 @@ export const All = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
+  .btn {
+    margin: 50px auto 0px;
+  }
 `;
 
 export const Top = styled.div`
@@ -54,10 +57,9 @@ export const Btn = styled.button`
   background: #6578a7;
   border: 1px solid #6578a7;
   border-radius: 50px;
-  margin-top: 50px;
+
   width: 400px;
   height: 60px;
-  margin: 50px auto 0px;
 `;
 
 export const Contents = styled.div`
