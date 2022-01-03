@@ -13,10 +13,12 @@ const Endmbti = () => {
   useEffect(() => {
     const holder = async () => {
       try {
-        console.log(props);
         const res = await axios(`http://3.19.174.2:8080/playlist/${props}`);
-        // console.log(res.data.data[0]);
-        // console.log(res.data.data[0].Artist);
+        console.log(res.data.data[0].url);
+        // for (let i = 0; i < 10; i++) {
+        //   console.log(res.data.data[0].url[i]);
+        // }
+
         setMbtis(res.data.data);
       } catch (error) {
         console.error(error);
@@ -28,7 +30,6 @@ const Endmbti = () => {
 
   //http://localhost:8080/playlist/
   //http://3.19.174.2:8080/playlist/
-  // const [number, setNumber] = useState(1);
 
   function dataplus() {
     setNumber((num) => num + 1);
@@ -124,15 +125,9 @@ const Endmbti = () => {
 
 export default Endmbti;
 
-// let test = JSON.stringify(mbtis, ["id", "title"], 3);
-
-// <Card keys={list.id}></Card>
-
 // {mbtilist.map((props) => (
 //   <Card keys={props.title}></Card>
 // ))}
-
-//.get(`http://localhost:8080/playlist/${props}`)
 
 {
   /* <ul>
@@ -143,18 +138,4 @@ export default Endmbti;
             </li>
           ))}
       </ul> */
-}
-
-{
-  /* <table>
-        <tbody>
-          {mbtis &&
-            mbtis.map((data) => (
-              <tr key={data.id}>
-                <td>{data.title}</td>
-                <td>{data.body}</td>
-              </tr>
-            ))}
-        </tbody>
-      </table> */
 }

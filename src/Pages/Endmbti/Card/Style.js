@@ -33,7 +33,8 @@ export const Card = styled.div`
 export const Img = styled.div`
   padding-top: 20px;
   div {
-    background-image: url("https://img.youtube.com/vi/UaaivA6ElmI/mqdefault.jpg");
+    background-image: url("${(p) => p.url || null}");
+    //background-image: url("https://img.youtube.com/vi/UaaivA6ElmI/0.jpg");
     width: 200px;
     height: 200px;
     border-radius: 25px;

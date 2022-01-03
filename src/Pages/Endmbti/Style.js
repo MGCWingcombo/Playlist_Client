@@ -10,7 +10,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   .btn {
-    margin: 50px auto 0px;
+    margin: 40px auto 0px;
   }
 `;
 
