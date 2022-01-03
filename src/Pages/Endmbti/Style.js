@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const All = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 90px;
+  margin-top: 50px;
 `;
 
 export const Content = styled.div`
@@ -14,12 +14,14 @@ export const Content = styled.div`
 export const Top = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 `;
 
 export const Data = styled.div`
   overflow-y: auto;
   overflow-x: hidden;
-  height: 780px;
+  border-radius: 20px;
+  height: 760px;
 `;
 
 export const Button = styled.button`
@@ -46,9 +48,16 @@ export const Ment = styled.p`
 `;
 
 export const Btn = styled.button`
-  font-family: "Prompt";
+  font-family: "NanumBold";
+  font-size: 1.5rem;
   color: #ffffff;
   background: #6578a7;
+  border: 1px solid #6578a7;
+  border-radius: 50px;
+  margin-top: 50px;
+  width: 400px;
+  height: 60px;
+  margin: 50px auto 0px;
 `;
 
 export const Contents = styled.div`

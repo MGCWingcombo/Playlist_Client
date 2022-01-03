@@ -111,6 +111,7 @@ const Endmbti = () => {
               </div>
             </S.Contents>
           </S.Data>
+          <S.Btn>MBTI 테스트 다시하기</S.Btn>
         </S.Content>
       </S.All>
     </>
