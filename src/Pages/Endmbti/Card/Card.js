@@ -14,8 +14,8 @@ const Card = ({ keys }) => {
           <S.Img url={keys.urlImg}>
             <div></div>
           </S.Img>
-          <p className="Artist">{keys.Artist}</p>
           <p className="Music">{keys.Music}</p>
+          <p className="Artist">{keys.Artist}</p>
         </a>
       </S.Card>
     </>
