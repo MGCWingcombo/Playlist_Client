@@ -32,7 +32,7 @@ const Addlist = ({}) => {
             <span>{location.state.mbti}</span>
           </S.backImage>
           <div className="btn" onClick={navigateClick}>
-            <S.Btn>내 플레이리스트에 추가하기</S.Btn>
+            <S.Btn>나의 추천 플레이리스트 보러가기</S.Btn>
           </div>
         </S.Contents>
         <div className="right">

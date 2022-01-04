@@ -36,7 +36,7 @@ function nextText(number) {
       return "새로운 사람들과 만난 자리에서 자기소개를 하게 된 당신";
     }
     case 11: {
-      return "친구들을 집으로 초대해 음식을 대접하는 할 때";
+      return "친구들을 집으로 초대해 음식을 대접 할 때";
     }
     case 12: {
       return "보름달이 떴다는 친구의 전화를 받은 나의 반응은?";

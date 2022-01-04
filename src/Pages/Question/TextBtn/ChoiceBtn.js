@@ -170,9 +170,9 @@ const ChoiceBtn = ({ number }) => {
             IE = "E";
           }
           if (NS >= 1) {
-            NS = "N";
-          } else if (NS <= -1) {
             NS = "S";
+          } else if (NS <= -1) {
+            NS = "N";
           }
           if (FT >= 1) {
             FT = "F";
@@ -253,9 +253,9 @@ const ChoiceBtn = ({ number }) => {
             IE = "E";
           }
           if (NS >= 1) {
-            NS = "N";
-          } else if (NS <= -1) {
             NS = "S";
+          } else if (NS <= -1) {
+            NS = "N";
           }
           if (FT >= 1) {
             FT = "F";
