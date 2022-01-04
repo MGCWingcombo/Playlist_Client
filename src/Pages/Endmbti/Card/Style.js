@@ -17,14 +17,14 @@ export const Card = styled.div`
   .Artist {
     font-family: "Prompt";
     font-size: 1.4rem;
-    font-weight: 800;
+    font-weight: 900;
     color: #6c6f8c;
     margin-bottom: 0px;
   }
   .Music {
     font-family: "Prompt";
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 800;
     color: #b6b6b6;
     margin: 0;
   }
