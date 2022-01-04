@@ -30,7 +30,7 @@ function BtnText2(number) {
       return "맛집을 다시 검색해서 찾아본다.";
     }
     case 9: {
-      return "드라이 샴푸? 그게 뭐야? 그거 좋아?";
+      return "화분? 무슨 화분? 어떻게 생겼는데?";
     }
     case 10: {
       return "먼저 나서서 나를 소개한다.";
@@ -74,7 +74,7 @@ function BtnText(number) {
       return "맛있어 보이는 옆 식당으로 들어간다.";
     }
     case 9: {
-      return "요즘 피곤해 보이더라 ㅠ 무슨 일 있는 거야?";
+      return "왜 요즘 기분이 우울해? 무슨 일 있는 거야? ㅠㅠ";
     }
     case 10: {
       return "일단 사람들이 자기 소개하는 걸 듣고 있다.";
