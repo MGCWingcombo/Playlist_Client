@@ -302,9 +302,9 @@ const ChoiceBtn = ({ number }) => {
           onClick={click}
           id="bottombtn"
           value="bottombtn"
-          fontcolor="#000000"
-          btncolor="#ffffff"
-          bordercolor="#c4c4c4"
+          fontcolor="#ffffff"
+          btncolor="#6578a7"
+          bordercolor="#6578a7"
         >
           {TextBtnbottom}
         </S.ChoiceBtn>
