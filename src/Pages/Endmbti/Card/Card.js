@@ -2,11 +2,6 @@ import React from "react";
 import * as S from "./Style";
 
 const Card = ({ keys }) => {
-  const thumbnail = keys.urlImg;
-  // for (let i = 0; i < 10; i++) {
-  //   console.log(thumbnail[i]);
-  // }
-  console.log(thumbnail);
   return (
     <>
       <S.Card>
