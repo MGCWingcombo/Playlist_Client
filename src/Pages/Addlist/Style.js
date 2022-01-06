@@ -36,7 +36,6 @@ export const Ment = styled.div`
 
 export const backImage = styled.div`
   position: relative;
-
   img {
     width: 250px;
     height: 250px;
@@ -63,4 +62,5 @@ export const Btn = styled.button`
   border: 1px solid #6578a7;
   border-radius: 50px;
   margin-bottom: 30vh;
+  cursor: pointer;
 `;

@@ -28,9 +28,11 @@ const MbtiTest = () => {
               alt="teststartimg"
             />
           </S.backImage>
-          <div onClick={navigateClick}>
-            <S.Btn>나와 맞는 플레이리스트 찾으러 가기</S.Btn>
-          </div>
+          <S.Btnwrap>
+            <div onClick={navigateClick}>
+              <S.Btn>나와 맞는 플레이리스트 찾으러 가기</S.Btn>
+            </div>
+          </S.Btnwrap>
         </S.Contents>
         <S.RightImg>
           <img src={require("../../assets/rightbuble.png")} alt="rightbuble" />

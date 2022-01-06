@@ -26,11 +26,10 @@ export const RightImg = styled.div`
 export const Contents = styled.div`
   width: 100%;
   height: 100vh;
-  margin-top: 70px;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 `;
 export const Ment = styled.div`
@@ -40,7 +39,7 @@ export const Ment = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
-  margin-top: 10vh;
+  margin-bottom: 10vh;
   white-space: nowrap;
   display: inline;
   div {
@@ -57,7 +56,7 @@ export const Ment = styled.div`
 
 export const backImage = styled.image`
   position: relative;
-
+  margin-bottom: 9vh;
   img {
     width: 470px;
     height: 350px;
@@ -74,5 +73,9 @@ export const Btn = styled.button`
   height: 70px;
   border: 1px solid #6578a7;
   border-radius: 50px;
-  margin-bottom: 30vh;
+  cursor: pointer;
+`;
+
+export const Btnwrap = styled.div`
+  margin-bottom: 4vh;
 `;

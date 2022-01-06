@@ -61,6 +61,7 @@ export const Btn = styled.button`
 
   width: 400px;
   height: 60px;
+  cursor: pointer;
 `;
 
 export const Contents = styled.div`
