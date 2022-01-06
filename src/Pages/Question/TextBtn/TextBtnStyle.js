@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const ChoiceBtn = styled.button`
-  font-family: "NanumBold";
+  font-family: "Nanum Gothic";
+  font-weight: 700;
   font-size: 1.125rem;
   width: 450px;
   height: 60px;

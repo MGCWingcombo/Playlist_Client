@@ -35,8 +35,8 @@ export const Contents = styled.div`
 `;
 export const Ment = styled.div`
   font-size: 2.2rem;
-  font-family: "NanumExtra";
-  font-weight: 300;
+  font-family: "Nanum Gothic";
+  font-weight: 800;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -65,7 +65,8 @@ export const backImage = styled.image`
 `;
 
 export const Btn = styled.button`
-  font-family: "NanumBold";
+  font-family: "Nanum Gothic";
+  font-weight: 700;
   background: #6578a7;
   color: white;
   font-size: 1.4rem;

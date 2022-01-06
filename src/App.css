@@ -1,23 +1,34 @@
 @font-face {
-  font-family: "Nanumregular";
-  src: url("./styleds/fonts/NanumGothic-Regular.woff") format("woff"),
+  font-family: "Nanum Gothic";
+  font-weight: 400;
+  src: url("./styleds/fonts/AnyConv.com__NanumGothic-Regular.woff2")
+      format("woff2"),
+    url("./styleds/fonts/NanumGothic-Regular.woff") format("woff"),
     url("./styleds/fonts/NanumGothic-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "NanumBold";
-  src: url("./styleds/fonts/NanumGothic-Bold.woff") format("woff"),
+  font-family: "Nanum Gothic";
+  font-weight: 700;
+  src: url("./styleds/fonts/AnyConv.com__NanumGothic-Bold.woff2")
+      format("woff2"),
+    url("./styleds/fonts/NanumGothic-Bold.woff") format("woff"),
     url("./styleds/fonts/NanumGothic-Bold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "NanumExtra";
-  src: url("./styleds/fonts/NanumGothic-ExtraBold.woff") format("woff"),
+  font-family: "Nanum Gothic";
+  font-weight: 800;
+  src: url("./styleds/fonts/AnyConv.com__NanumGothic-ExtraBold.woff2")
+      format("woff2"),
+    url("./styleds/fonts/NanumGothic-ExtraBold.woff") format("woff"),
     url("./styleds/fonts/NanumGothic-ExtraBold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Prompt";
-  src: url("./styleds/fonts/Prompt-ExtraBold.woff") format("woff"),
+  src: url("./styleds/fonts/AnyConv.com__Prompt-ExtraBold\ \(1\).woff2")
+      format("woff2"),
+    url("./styleds/fonts/Prompt-ExtraBold.woff") format("woff"),
     url("./styleds/fonts/Prompt-ExtraBold.ttf") format("truetype");
 }

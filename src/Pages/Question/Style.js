@@ -18,20 +18,23 @@ export const Top = styled.div`
 `;
 
 export const Number = styled.div`
-  font-family: "NanumExtra";
+  font-family: "Nanum Gothic";
+  font-weight: 800;
   font-size: 3.4375rem;
   color: #6578a7;
 `;
 
 export const Count = styled.div`
-  font-family: "NanumExtra";
+  font-family: "Nanum Gothic";
+  font-weight: 800;
   font-size: 1.25rem;
   padding-top: 35px;
   color: #909090;
 `;
 
 export const Questions = styled.div`
-  font-family: "NanumExtra";
+  font-family: "Nanum Gothic";
+  font-weight: 800;
   font-size: 1.5rem;
   margin-top: 50px;
 `;

@@ -51,7 +51,8 @@ export const Ment = styled.p`
 `;
 
 export const Btn = styled.button`
-  font-family: "NanumBold";
+  font-family: "Nanum Gothic";
+  font-weight: 700;
   font-size: 1.5rem;
   color: #ffffff;
   background: #6578a7;
