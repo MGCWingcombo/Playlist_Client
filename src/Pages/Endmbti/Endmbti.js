@@ -23,6 +23,7 @@ const Endmbti = () => {
     holder();
   }, []);
 
+  //http://3.19.174.2:8080/playlist/
   //http://localhost:8080/playlist/
   //http://3.19.174.2:8080/playlist/
 
