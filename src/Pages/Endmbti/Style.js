@@ -29,16 +29,16 @@ export const Data = styled.div`
 
 export const Button = styled.button`
   font-family: "Prompt";
-  color: #ffffff;
-  background: #6578a7;
+  color: #6c6f8c;
+  background: white;
   font-size: 1.2rem;
   font-weight: 700;
-  width: 90px;
+  width: 100px;
   height: 40px;
   margin-top: 70px;
   margin-right: 30px;
   border-radius: 10px;
-  border: 1px solid #6578a7;
+  border: 1.9px solid #6c6f8c;
   cursor: pointer;
 `;
 

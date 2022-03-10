@@ -111,7 +111,7 @@ const Endmbti = () => {
             </S.Contents>
           </S.Data>
           <a className="btn" href="/">
-            <S.Btn>MBTI 테스트 다시하기</S.Btn>
+            <S.Btn>MBTI 검사 다시하기</S.Btn>
           </a>
         </S.Content>
       </S.All>
