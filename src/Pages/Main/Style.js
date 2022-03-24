@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Content = styled.div`
+  width: 100%;
+`;
+
 export const Header = styled.header`
   width: 100%;
   height: 140px;
@@ -31,4 +35,25 @@ export const Button = styled.button`
   border: 1px solid #6578a7;
   border-radius: 10px;
   cursor: pointer;
+`;
+
+export const Contents = styled.div`
+  padding-top: 140px;
+  p {
+    font-family: "Prompt";
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-top: 30px;
+    padding-left: 165px;
+  }
+`;
+
+export const Cardlist = styled.div`
+  display: flex;
+  margin: 0 100px;
+  justify-content: space-evenly;
 `;
