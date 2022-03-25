@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Main/Home";
 import "./App.css";
 import Addlist from "./Pages/Addlist/Addlist";
-import Endmbti from "./Pages/Endmbti/Endmbti";
+import Endmbti from "./Pages/Lastpage/Endmbti";
 import MBTI_btn from "./Components/Func/MBTI_btn";
 import Question from "./Pages/Question/Question";
 import Test from "./Pages/test";
