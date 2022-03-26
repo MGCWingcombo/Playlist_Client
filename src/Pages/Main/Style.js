@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import device from "../../styleds/GlobalStyle";
 export const Content = styled.div`
   width: 100%;
   height: 1570px;
