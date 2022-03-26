@@ -5,9 +5,7 @@ import Home from "./Pages/Main/Home";
 import "./App.css";
 import Addlist from "./Pages/Addlist/Addlist";
 import Endmbti from "./Pages/Lastpage/Endmbti";
-import MBTI_btn from "./Components/Func/MBTI_btn";
 import Question from "./Pages/Question/Question";
-import Test from "./Pages/test";
 
 function App() {
   return (
@@ -19,7 +17,6 @@ function App() {
           <Route path="mbti-test" element={<Question />} />
           <Route path="mbti-result" element={<Addlist />} />
           <Route path="recommend-list" element={<Endmbti />} />
-          <Route path="test" element={<Test />} />
         </Routes>
       </BrowserRouter>
     </div>
