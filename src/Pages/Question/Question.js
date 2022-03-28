@@ -5,7 +5,12 @@ import * as S from "./Style";
 function nextText(number) {
   switch (number) {
     case 1: {
-      return "오랜만에 찾아온 휴일, 당신이 원하는 휴식 방법은?";
+      return (
+        <div>
+          오랜만에 찾아온 휴일,{" "}
+          <span className="oneQ">당신이 원하는 휴식 방법은?</span>
+        </div>
+      );
     }
     case 2: {
       return "파티에 참석한 당신이 위치한 곳은?";
@@ -58,7 +63,18 @@ const Question = () => {
   };
 
   return (
-    <>
+    <S.Con>
+      <S.Header>
+        <S.PrevBtn>
+          <img src={require("../../assets/chevron.png")} alt="chevron" />
+        </S.PrevBtn>
+        <S.Logo>
+          <img
+            src={require("../../assets/playlistlogo.png")}
+            alt="playlistlogo"
+          />
+        </S.Logo>
+      </S.Header>
       <S.Content>
         <S.Top>
           <S.Number>Q{number}.</S.Number>
@@ -66,12 +82,12 @@ const Question = () => {
         </S.Top>
 
         <S.Questions>{ShowState}</S.Questions>
-
+        {/* <ChoiceBtn number={number} onClick={() => nextCount()} /> */}
         <S.Btns onClick={nextCount}>
           <ChoiceBtn number={number} />
         </S.Btns>
       </S.Content>
-    </>
+    </S.Con>
   );
 };
 

@@ -61,9 +61,7 @@ export const Ment = styled.div`
   }
   @media ${device.mobile} {
     font-size: 1.3rem;
-    .middle {
-      display: block;
-    }
+
     .playlist {
       display: block;
     }
@@ -79,7 +77,7 @@ export const backImage = styled.image`
   }
   @media ${device.mobile} {
     .img {
-      width: 280px;
+      width: 270px;
       height: 200px;
     }
   }
@@ -98,7 +96,7 @@ export const Btn = styled.button`
   cursor: pointer;
 
   @media ${device.mobile} {
-    width: 300px;
+    width: 310px;
     height: 50px;
     font-size: 1rem;
   }
@@ -106,4 +104,7 @@ export const Btn = styled.button`
 
 export const Btnwrap = styled.div`
   margin-bottom: 4vh;
+  @media ${device.mobile} {
+    margin-top: 4vh;
+  }
 `;

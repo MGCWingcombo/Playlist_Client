@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import device from "../../../styleds/GlobalStyle";
 export const ChoiceBtn = styled.button`
   font-family: "Nanum Gothic";
   font-weight: 700;
@@ -17,6 +17,12 @@ export const ChoiceBtn = styled.button`
     color: ${(p) => p.fontcolor || null};
     background: ${(p) => p.btncolor || null};
     border-color: ${(p) => p.bordercolor || null};
+  }
+
+  @media ${device.mobile} {
+    width: 340px;
+    height: 50px;
+    font-size: 1rem;
   }
 `;
 
