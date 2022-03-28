@@ -22,7 +22,7 @@ export const ChoiceBtn = styled.button`
   @media ${device.mobile} {
     width: 340px;
     height: 50px;
-    font-size: 1rem;
+    font-size: 0.89rem;
   }
 `;
 

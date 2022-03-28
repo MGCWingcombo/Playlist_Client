@@ -93,18 +93,7 @@ export const Questions = styled.div`
     font-size: 1.3rem;
     margin: 50px 0;
     text-align: center;
-    /* .oneQ {
-      display: block;
-    }
-    .threeQ {
-      font-size: 1.2rem;
-    }
-    .fourQ {
-      display: block;
-    }
-    .fiveQ {
-      display: block;
-    } */
+
     span {
       display: block;
     }
