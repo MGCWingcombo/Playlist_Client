@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import device from "../../styleds/GlobalStyle";
 
 export const Content = styled.div`
   display: flex;
@@ -12,6 +13,9 @@ export const LeftImg = styled.div`
     width: 270px;
     height: 470px;
   }
+  @media ${device.mobile} {
+    display: none;
+  }
 `;
 export const RightImg = styled.div`
   position: fixed;
@@ -20,6 +24,9 @@ export const RightImg = styled.div`
   img {
     width: 320px;
     height: 650px;
+  }
+  @media ${device.mobile} {
+    display: none;
   }
 `;
 
@@ -52,14 +59,29 @@ export const Ment = styled.div`
     font-family: "Prompt";
     color: #6578a7;
   }
+  @media ${device.mobile} {
+    font-size: 1.3rem;
+    .middle {
+      display: block;
+    }
+    .playlist {
+      display: block;
+    }
+  }
 `;
 
 export const backImage = styled.image`
   position: relative;
   margin-bottom: 9vh;
-  img {
+  .img {
     width: 470px;
     height: 350px;
+  }
+  @media ${device.mobile} {
+    .img {
+      width: 280px;
+      height: 200px;
+    }
   }
 `;
 
@@ -74,6 +96,12 @@ export const Btn = styled.button`
   border: 1px solid #6578a7;
   border-radius: 50px;
   cursor: pointer;
+
+  @media ${device.mobile} {
+    width: 300px;
+    height: 50px;
+    font-size: 1rem;
+  }
 `;
 
 export const Btnwrap = styled.div`
