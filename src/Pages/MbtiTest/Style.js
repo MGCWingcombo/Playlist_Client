@@ -61,7 +61,11 @@ export const Ment = styled.div`
   }
   @media ${device.mobile} {
     font-size: 1.3rem;
-
+    .middle {
+      span {
+        display: none;
+      }
+    }
     .playlist {
       display: block;
     }

@@ -18,7 +18,9 @@ const MbtiTest = () => {
         <S.Contents>
           <S.Ment>
             <div className="mbti">MBTI</div>
-            <div className="middle">로 알아보는 나의 </div>
+            <div className="middle">
+              로 알아보는 <span>나의</span>{" "}
+            </div>
             <div className="playlist">PLAYLIST</div>
           </S.Ment>
           <S.backImage>
