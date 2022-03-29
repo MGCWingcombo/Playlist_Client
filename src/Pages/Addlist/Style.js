@@ -1,12 +1,21 @@
 import styled from "styled-components";
-
+import device from "../../styleds/GlobalStyle";
 export const Content = styled.div`
   display: flex;
   .left {
     margin-left: 20px;
+    @media ${device.mobile} {
+      display: none;
+    }
   }
   .right {
     margin-right: 20px;
+    @media ${device.mobile} {
+      display: none;
+    }
+  }
+  @media ${device.mobile} {
+    flex-direction: column;
   }
 `;
 
@@ -32,6 +41,20 @@ export const Ment = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 10vh;
+  @media ${device.mobile} {
+    margin-top: 150px;
+    font-size: 1.3rem;
+    .change {
+      font-size: 0px;
+    }
+    .change2 {
+      display: none;
+    }
+    .change::before {
+      font-size: 1.3rem;
+      content: "매일";
+    }
+  }
 `;
 
 export const backImage = styled.div`
@@ -49,6 +72,17 @@ export const backImage = styled.div`
     top: 40%;
     left: 35%;
   }
+
+  @media ${device.mobile} {
+    margin: 75px 0 85px;
+    img {
+      width: 190px;
+      height: 190px;
+    }
+    span {
+      top: 36%;
+    }
+  }
 `;
 
 export const Btn = styled.button`
@@ -63,4 +97,16 @@ export const Btn = styled.button`
   border-radius: 50px;
   margin-bottom: 30vh;
   cursor: pointer;
+  @media ${device.mobile} {
+    width: 330px;
+    height: 50px;
+    border-radius: 5px;
+    p {
+      font-size: 0px;
+    }
+    p::before {
+      font-size: 1.1rem;
+      content: "추천 플레이리스트 보기";
+    }
+  }
 `;
