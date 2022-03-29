@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from "react";
 import ChoiceBtn from "./TextBtn/ChoiceBtn";
 import * as S from "./Style";
+import Mob_header from "../../Components/mobile_header/Mob_header";
 
 function nextText(number) {
   switch (number) {
@@ -90,17 +91,7 @@ const Question = () => {
 
   return (
     <S.Con>
-      <S.Header>
-        <S.PrevBtn>
-          <img src={require("../../assets/chevron.png")} alt="chevron" />
-        </S.PrevBtn>
-        <S.Logo>
-          <img
-            src={require("../../assets/playlistlogo.png")}
-            alt="playlistlogo"
-          />
-        </S.Logo>
-      </S.Header>
+      <Mob_header />
       <S.Content>
         <S.Top>
           <S.Number>Q{number}.</S.Number>
