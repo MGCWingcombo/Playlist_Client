@@ -81,6 +81,7 @@ export const backImage = styled.div`
     }
     span {
       top: 36%;
+      left: 33%;
     }
   }
 `;
