@@ -98,7 +98,7 @@ export const Btn = styled.button`
   margin-bottom: 30vh;
   cursor: pointer;
   @media ${device.mobile} {
-    width: 330px;
+    width: 320px;
     height: 50px;
     border-radius: 5px;
     p {
