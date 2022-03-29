@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import ChoiceBtn from "./TextBtn/ChoiceBtn";
 import * as S from "./Style";
 import Mob_header from "../../Components/mobile_header/Mob_header";

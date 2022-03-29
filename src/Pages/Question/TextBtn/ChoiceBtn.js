@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import * as S from "./TextBtnStyle";
@@ -97,6 +97,12 @@ let FT = 0;
 let JP = 0;
 
 const ChoiceBtn = ({ number }) => {
+  useEffect(() => {
+    IE = 0;
+    NS = 0;
+    FT = 0;
+    JP = 0;
+  }, []);
   const location = useLocation();
 
   const navigate = useNavigate();

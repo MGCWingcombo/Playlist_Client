@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as S from "./Style";
 // import SideMbti from "../../Components/SideMbti/SideMbti";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const MbtiTest = () => {
+  const location = useLocation();
   const navigate = useNavigate();
   function navigateClick() {
     navigate("/mbti-test");

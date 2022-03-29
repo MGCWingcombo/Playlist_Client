@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as S from "./Style";
 import SideMbti from "../../Components/SideMbti/SideMbti";
 import { useNavigate } from "react-router-dom";
@@ -13,6 +13,11 @@ const Addlist = ({}) => {
   function navigateClick() {
     navigate("/recommend-list", { state: { mbti: location.state.mbti } });
   }
+
+  // useEffect(() => {
+  //   console.log("hi");
+  // }, [location]);
+
   return (
     <>
       <S.Content>

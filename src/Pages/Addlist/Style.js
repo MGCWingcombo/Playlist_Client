@@ -79,10 +79,6 @@ export const backImage = styled.div`
       width: 190px;
       height: 190px;
     }
-    span {
-      top: 36%;
-      left: 33%;
-    }
   }
 `;
 
@@ -97,6 +93,9 @@ export const Btn = styled.button`
   border: 1px solid #6578a7;
   border-radius: 50px;
   margin-bottom: 30vh;
+  p {
+    margin: 10px 0;
+  }
   cursor: pointer;
   @media ${device.mobile} {
     width: 320px;
