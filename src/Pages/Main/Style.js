@@ -15,6 +15,10 @@ export const Header = styled.header`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+
+  @media ${device.mobile} {
+    display: none;
+  }
 `;
 
 export const Logo = styled.div`
