@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import * as S from "./Style";
 // import SideMbti from "../../Components/SideMbti/SideMbti";
 import { useNavigate, useLocation } from "react-router-dom";

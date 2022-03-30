@@ -91,7 +91,7 @@ const Question = () => {
 
   return (
     <S.Con>
-      <Mob_header />
+      <Mob_header prevBtn={true} />
       <S.Content>
         <S.Top>
           <S.Number>Q{number}.</S.Number>

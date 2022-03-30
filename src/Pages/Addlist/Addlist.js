@@ -14,14 +14,10 @@ const Addlist = ({}) => {
     navigate("/recommend-list", { state: { mbti: location.state.mbti } });
   }
 
-  // useEffect(() => {
-  //   console.log("hi");
-  // }, [location]);
-
   return (
     <>
       <S.Content>
-        <Mob_header />
+        <Mob_header prevBtn={true} />
         <div className="left">
           <SideMbti />
         </div>
