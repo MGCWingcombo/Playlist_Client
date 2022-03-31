@@ -3,6 +3,9 @@ import device from "../../styleds/GlobalStyle";
 export const Content = styled.div`
   width: 100%;
   height: 1570px;
+  @media ${device.mobile} {
+    height: 1160px;
+  }
 `;
 
 export const Header = styled.header`
@@ -47,18 +50,16 @@ export const Contents = styled.div`
   flex-direction: column;
 
   padding-top: 12vh;
-  p {
-    font-family: "Prompt";
-    font-weight: 600;
-    font-size: 1rem;
-  }
+
   .subtitle {
+    font-family: "Prompt";
     font-size: 1.5rem;
     font-weight: 700;
     padding-top: 30px;
-    padding-left: 6vw;
+    padding-left: 4vw;
   }
   @media ${device.mobile} {
+    padding: 0 15px;
     .subtitle {
       font-family: "Prompt";
       font-size: 1.1rem;
@@ -76,13 +77,12 @@ export const Cardlist = styled.div`
     overflow-y: hidden;
     overflow-x: auto;
     width: 100%;
-    margin: 0;
   }
 `;
 
 export const Condition_Contents = styled.div`
   display: none;
-  p {
+  .subtitle_mbti {
     font-family: "Prompt";
     font-size: 1.1rem;
     font-weight: 700;
