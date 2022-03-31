@@ -17,6 +17,8 @@ export const PrevBtn = styled.button`
   background: white;
   border: none;
   margin-top: 1vw;
+  position: fixed;
+  top: 5px;
   img {
     width: 25px;
     height: 25px;
@@ -24,10 +26,12 @@ export const PrevBtn = styled.button`
 `;
 
 export const Logo = styled.div`
-  width: 92px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   height: 27px;
   margin-top: 2.3vw;
-  margin-left: 28vw;
+  /* margin-left: 28vw; */
   img {
     width: 92px;
     height: 27px;

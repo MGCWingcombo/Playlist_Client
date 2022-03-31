@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./Style";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Mob_header = ({ prevBtn }) => {
   const navigate = useNavigate();
@@ -11,7 +11,11 @@ const Mob_header = ({ prevBtn }) => {
     <>
       <S.Header>
         {prevBtn && (
-          <S.PrevBtn onClick={hi}>
+          <S.PrevBtn
+            onClick={() => {
+              navigate(-1);
+            }}
+          >
             <img src={require("../../assets/chevron.png")} alt="chevron" />
           </S.PrevBtn>
         )}
