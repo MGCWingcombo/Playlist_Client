@@ -25,7 +25,12 @@ const Home = () => {
         </S.Header>
 
         <Mob_header prevBtn={false} />
-
+        <S.Condition_Contents>
+          <p className="subtitle_mbti">MBTI로 알아보는 플레이리스트</p>
+          <S.Btn>
+            <img src={require("../../assets/mbtiBtn.png")} alt="mbti_button" />
+          </S.Btn>
+        </S.Condition_Contents>
         <RepeatHomeCon />
       </S.Content>
     </>

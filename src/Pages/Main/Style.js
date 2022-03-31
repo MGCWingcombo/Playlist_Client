@@ -43,7 +43,7 @@ export const Button = styled.button`
 `;
 
 export const Contents = styled.div`
-  padding-top: 140px;
+  padding-top: 12vh;
   p {
     font-family: "Prompt";
     font-weight: 600;
@@ -55,10 +55,39 @@ export const Contents = styled.div`
     padding-top: 30px;
     padding-left: 165px;
   }
+  @media ${device.mobile} {
+    .subtitle {
+      font-family: "Prompt";
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+  }
 `;
 
 export const Cardlist = styled.div`
   display: flex;
   margin: 0 100px;
   justify-content: space-evenly;
+`;
+
+export const Condition_Contents = styled.div`
+  display: none;
+  p {
+    font-family: "Prompt";
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding-top: 3vh;
+    padding-left: 3.7vh;
+    margin-bottom: 0;
+  }
+  @media ${device.mobile} {
+    display: block;
+  }
+`;
+
+export const Btn = styled.div`
+  padding-left: 1.5vh;
+  img {
+    width: 43vh;
+  }
 `;
