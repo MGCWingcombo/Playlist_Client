@@ -58,7 +58,9 @@ export const Ment = styled.div`
 `;
 
 export const backImage = styled.div`
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   img {
     width: 250px;
     height: 250px;
@@ -69,8 +71,6 @@ export const backImage = styled.div`
     font-weight: 900;
     color: white;
     position: absolute;
-    top: 40%;
-    left: 35%;
   }
 
   @media ${device.mobile} {
