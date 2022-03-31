@@ -43,6 +43,9 @@ export const Button = styled.button`
 `;
 
 export const Contents = styled.div`
+  display: flex;
+  flex-direction: column;
+
   padding-top: 12vh;
   p {
     font-family: "Prompt";
@@ -53,7 +56,7 @@ export const Contents = styled.div`
     font-size: 1.5rem;
     font-weight: 700;
     padding-top: 30px;
-    padding-left: 165px;
+    padding-left: 6vw;
   }
   @media ${device.mobile} {
     .subtitle {
@@ -66,8 +69,15 @@ export const Contents = styled.div`
 
 export const Cardlist = styled.div`
   display: flex;
-  margin: 0 100px;
-  justify-content: space-evenly;
+  width: 100%;
+  justify-content: center;
+
+  @media ${device.mobile} {
+    overflow-y: hidden;
+    overflow-x: auto;
+    width: 100%;
+    margin: 0;
+  }
 `;
 
 export const Condition_Contents = styled.div`
