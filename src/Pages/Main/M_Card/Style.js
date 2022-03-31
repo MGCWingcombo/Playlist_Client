@@ -31,7 +31,7 @@ export const Card = styled.div`
     margin: 9px;
     .card_sentence {
       padding: 0 0 45px 0;
-      font-size: 0.7rem;
+      font-size: 0.6rem;
       margin: 5px 0;
     }
   }

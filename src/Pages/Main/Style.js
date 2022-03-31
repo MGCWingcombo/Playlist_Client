@@ -56,10 +56,10 @@ export const Contents = styled.div`
     font-size: 1.5rem;
     font-weight: 700;
     padding-top: 30px;
-    padding-left: 4vw;
+    padding-left: 6.68vw;
   }
   @media ${device.mobile} {
-    padding: 0 15px;
+    padding: 0 5px;
     .subtitle {
       font-family: "Prompt";
       font-size: 1.1rem;
@@ -77,6 +77,7 @@ export const Cardlist = styled.div`
     overflow-y: hidden;
     overflow-x: auto;
     width: 100%;
+    justify-content: stretch;
   }
 `;
 
