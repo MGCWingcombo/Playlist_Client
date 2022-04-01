@@ -54,7 +54,7 @@ function nextText(number) {
       return "내가 미리 찾아본 식당이 오늘 문을 닫았다. 이때 내 선택은?";
     }
     case 9: {
-      return `“나 요즘 기분이 우울해서 화분 샀어" 
+      return `“나 요즘 기분이 우울해서 화분 샀어"
       라는 말을 들었을 때 당신은?`;
     }
     case 10: {
@@ -85,8 +85,12 @@ const Question = () => {
 
   const ShowState = useMemo(() => nextText(number), [number]);
 
-  const nextCount = () => {
-    setNumber((nextNumber) => nextNumber + 1);
+  // const nextCount = () => {
+  //   setNumber((number) => number + 1);
+  // };
+
+  const getNumber = () => {
+    setNumber((number) => number + 1);
   };
 
   return (
@@ -99,9 +103,12 @@ const Question = () => {
         </S.Top>
 
         <S.Questions>{ShowState}</S.Questions>
-        {/* <ChoiceBtn number={number} onClick={() => nextCount()} /> */}
-        <S.Btns onClick={nextCount}>
+        {/* <ChoiceBtn onClick={nextCount} number={number} /> */}
+        {/* <S.Btns onClick={nextCount}>
           <ChoiceBtn number={number} />
+        </S.Btns> */}
+        <S.Btns>
+          <ChoiceBtn getNumber={getNumber} number={number} />
         </S.Btns>
       </S.Content>
     </S.Con>

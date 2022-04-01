@@ -1,6 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import * as S from "./TextBtnStyle";
 
 function BtnText2(number) {
@@ -96,14 +95,13 @@ let NS = 0;
 let FT = 0;
 let JP = 0;
 
-const ChoiceBtn = ({ number }) => {
+const ChoiceBtn = ({ number, getNumber }) => {
   useEffect(() => {
     IE = 0;
     NS = 0;
     FT = 0;
     JP = 0;
   }, []);
-  const location = useLocation();
 
   const navigate = useNavigate();
   function navigateClick(mbtiword) {
@@ -118,8 +116,7 @@ const ChoiceBtn = ({ number }) => {
 
   function click(btnid) {
     const btnids = btnid.target.id;
-
-    setTimeout(() => setAlpha(number));
+    getNumber((number) => number + 1);
 
     if (btnids == "topbtn") {
       switch (alpha) {
