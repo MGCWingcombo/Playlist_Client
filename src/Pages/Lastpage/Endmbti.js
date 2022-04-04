@@ -3,6 +3,7 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import * as S from "./Style";
 import Card from "./Card/Card";
+import Mobheader from "../../Components/mobile_header/Mob_header";
 
 const Endmbti = () => {
   const [mbtis, setMbtis] = useState("");
@@ -54,6 +55,7 @@ const Endmbti = () => {
 
   return (
     <>
+      <Mobheader prevBtn={true} />
       <S.All>
         <S.Content>
           <S.Top>
