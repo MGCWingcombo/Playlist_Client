@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import * as S from "./Style";
 import SideMbti from "../../Components/SideMbti/SideMbti";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import Mob_header from "../../Components/mobile_header/Mob_header";
+import Mobheader from "../../Components/mobile_header/Mob_header";
 
 const Addlist = ({}) => {
   const location = useLocation();
@@ -17,7 +17,7 @@ const Addlist = ({}) => {
   return (
     <>
       <S.Content>
-        <Mob_header prevBtn={true} />
+        <Mobheader prevBtn={true} />
         <div className="left">
           <SideMbti />
         </div>

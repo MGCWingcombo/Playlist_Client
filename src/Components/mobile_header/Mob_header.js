@@ -4,9 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const Mob_header = ({ prevBtn }) => {
   const navigate = useNavigate();
-  function hi() {
-    navigate(-1);
-  }
+
   return (
     <>
       <S.Header>

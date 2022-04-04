@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import device from "../../styleds/constant";
 
 export const All = styled.div`
   display: flex;

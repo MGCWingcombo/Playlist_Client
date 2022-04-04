@@ -6,10 +6,12 @@ import "./App.css";
 import Addlist from "./Pages/Addlist/Addlist";
 import Endmbti from "./Pages/Lastpage/Endmbti";
 import Question from "./Pages/Question/Question";
+import GlobalStyle from "./styleds/GlobalStyle";
 
 function App() {
   return (
     <div>
+      <GlobalStyle />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />

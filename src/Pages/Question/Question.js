@@ -1,7 +1,7 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import ChoiceBtn from "./TextBtn/ChoiceBtn";
 import * as S from "./Style";
-import Mob_header from "../../Components/mobile_header/Mob_header";
+import Mobheader from "../../Components/mobile_header/Mob_header";
 
 function nextText(number) {
   switch (number) {
@@ -85,17 +85,13 @@ const Question = () => {
 
   const ShowState = useMemo(() => nextText(number), [number]);
 
-  // const nextCount = () => {
-  //   setNumber((number) => number + 1);
-  // };
-
   const getNumber = () => {
     setNumber((number) => number + 1);
   };
 
   return (
     <S.Con>
-      <Mob_header prevBtn={true} />
+      <Mobheader prevBtn={true} />
       <S.Content>
         <S.Top>
           <S.Number>Q{number}.</S.Number>
@@ -103,10 +99,7 @@ const Question = () => {
         </S.Top>
 
         <S.Questions>{ShowState}</S.Questions>
-        {/* <ChoiceBtn onClick={nextCount} number={number} /> */}
-        {/* <S.Btns onClick={nextCount}>
-          <ChoiceBtn number={number} />
-        </S.Btns> */}
+
         <S.Btns>
           <ChoiceBtn getNumber={getNumber} number={number} />
         </S.Btns>
