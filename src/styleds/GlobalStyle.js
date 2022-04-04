@@ -1,9 +1,7 @@
-const size = {
-  mobile: "600px",
-};
+import { createGlobalStyle } from "styled-components";
 
-const device = {
-  mobile: `(max-width: ${size.mobile})`,
-};
+const GlobalStyle = createGlobalStyle`
+    html, body { max-width: 100%; overflow-x: hidden; }
+`;
 
-export default device;
+export default GlobalStyle;
