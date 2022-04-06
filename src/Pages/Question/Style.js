@@ -6,12 +6,16 @@ export const Con = styled.div`
 `;
 
 export const Content = styled.div`
+  position: fixed;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100vh;
   justify-content: space-evenly;
   align-items: center;
+  @media ${device.mobile} {
+    padding-top: 50px;
+  }
 `;
 
 export const Top = styled.div`
