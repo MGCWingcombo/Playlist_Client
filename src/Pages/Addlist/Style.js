@@ -31,6 +31,10 @@ export const Contents = styled.div`
     height: 60px;
     margin-bottom: 300px;
   }
+  @media ${device.mobile} {
+    margin-top: 60px;
+    position: fixed;
+  }
 `;
 
 export const Ment = styled.div`
