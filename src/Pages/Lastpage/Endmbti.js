@@ -14,7 +14,7 @@ const Endmbti = () => {
   useEffect(() => {
     const holder = async () => {
       try {
-        const res = await axios(`http://3.19.174.2:8080/playlist/${props}`);
+        const res = await axios(`http://52.78.85.15:8080/playlist/${props}`);
         setMbtis(res.data.data);
       } catch (error) {
         console.error(error);
@@ -23,7 +23,7 @@ const Endmbti = () => {
 
     holder();
   }, []);
-
+  //http://52.78.85.15:8080/playlist/entj
   //http://3.19.174.2:8080/playlist/
   //http://localhost:8080/playlist/
   //http://3.19.174.2:8080/playlist/
@@ -54,7 +54,13 @@ const Endmbti = () => {
   }
 
   return (
-    <>
+    <S.Rall>
+      <S.Logo>
+        <img
+          src={require("../../assets/playlistlogo.png")}
+          alt="playlistlogo"
+        />
+      </S.Logo>
       <Mobheader prevBtn={true} />
       <S.All>
         <S.Content>
@@ -117,7 +123,7 @@ const Endmbti = () => {
           </a>
         </S.Content>
       </S.All>
-    </>
+    </S.Rall>
   );
 };
 
