@@ -4,6 +4,8 @@ export const Header = styled.div`
   display: none;
 
   @media ${device.mobile} {
+    top: 0;
+    position: fixed;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -17,7 +19,7 @@ export const PrevBtn = styled.button`
   background: white;
   border: none;
   margin-top: 1vw;
-  position: fixed;
+  position: absolute;
   top: 5px;
   img {
     width: 25px;
