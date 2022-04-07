@@ -23,10 +23,6 @@ const Endmbti = () => {
 
     holder();
   }, []);
-  //http://52.78.85.15:8080/playlist/entj
-  //http://3.19.174.2:8080/playlist/
-  //http://localhost:8080/playlist/
-  //http://3.19.174.2:8080/playlist/
 
   function dataplus() {
     setNumber((num) => num + 1);
