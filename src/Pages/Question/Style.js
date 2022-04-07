@@ -14,7 +14,7 @@ export const Content = styled.div`
   justify-content: space-evenly;
   align-items: center;
   @media ${device.mobile} {
-    padding-top: 50px;
+    margin-top: 50px;
   }
 `;
 
