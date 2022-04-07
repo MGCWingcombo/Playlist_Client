@@ -34,12 +34,19 @@ export const Content = styled.div`
   .btn {
     margin: 40px auto 0px;
   }
+  @media ${device.mobile} {
+    padding: 0 20px;
+  }
 `;
 
 export const Top = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  @media ${device.mobile} {
+    justify-content: center;
+    margin-top: 90px;
+  }
 `;
 
 export const Data = styled.div`
@@ -47,12 +54,17 @@ export const Data = styled.div`
   overflow-x: hidden;
   border-radius: 20px;
   height: 760px;
+
   @media ${device.mobile} {
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
-    width: 1000px;
+    width: 100vw;
     height: auto;
+    .mobileview {
+      display: flex;
+      padding: 0 35px;
+    }
   }
 `;
 
@@ -63,9 +75,10 @@ export const Ment = styled.p`
   color: #6c6f8c;
   margin-left: 50px;
   @media ${device.mobile} {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #6578a7;
+    margin-left: 0;
   }
 `;
 
@@ -99,6 +112,13 @@ export const Btn = styled.button`
   width: 400px;
   height: 60px;
   cursor: pointer;
+  @media ${device.mobile} {
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-top: 40px;
+  }
 `;
 
 export const Contents = styled.div`
@@ -116,7 +136,5 @@ export const Contents = styled.div`
   }
   .force_data {
     display: none;
-  }
-  @media ${device.mobile} {
   }
 `;

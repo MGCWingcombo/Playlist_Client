@@ -69,22 +69,24 @@ const Endmbti = () => {
             <S.Button onClick={dataplus}>더보기</S.Button>
           </S.Top>
           <S.Data>
-            <S.Contents>
-              <div>
-                {mbtis && <Card keys={mbtis[0]} />}
-                {mbtis && <Card keys={mbtis[1]} />}
-                {mbtis && <Card keys={mbtis[2]} />}
-                {mbtis && <Card keys={mbtis[3]} />}
-              </div>
-            </S.Contents>
-            <S.Contents>
-              <div>
-                {mbtis && <Card keys={mbtis[4]} />}
-                {mbtis && <Card keys={mbtis[5]} />}
-                {mbtis && <Card keys={mbtis[6]} />}
-                {mbtis && <Card keys={mbtis[7]} />}
-              </div>
-            </S.Contents>
+            <div className="mobileview">
+              <S.Contents>
+                <div>
+                  {mbtis && <Card keys={mbtis[0]} />}
+                  {mbtis && <Card keys={mbtis[1]} />}
+                  {mbtis && <Card keys={mbtis[2]} />}
+                  {mbtis && <Card keys={mbtis[3]} />}
+                </div>
+              </S.Contents>
+              <S.Contents>
+                <div>
+                  {mbtis && <Card keys={mbtis[4]} />}
+                  {mbtis && <Card keys={mbtis[5]} />}
+                  {mbtis && <Card keys={mbtis[6]} />}
+                  {mbtis && <Card keys={mbtis[7]} />}
+                </div>
+              </S.Contents>
+            </div>
             <S.Contents className="one">
               <div id="first_data" className="first_data">
                 {mbtis && <Card keys={mbtis[8]} />}

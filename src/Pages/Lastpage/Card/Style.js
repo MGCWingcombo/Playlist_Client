@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import device from "../../../styleds/constant";
 export const Contents = styled.div``;
 
 export const Card = styled.div`
@@ -28,6 +28,28 @@ export const Card = styled.div`
     color: #b6b6b6;
     margin: 0;
   }
+
+  @media ${device.mobile} {
+    min-width: 205px;
+    min-height: 240px;
+    max-width: 205px;
+    max-height: 240px;
+    box-shadow: 0px 0px 5px #b6b6b6;
+    margin: 9px;
+    a {
+      margin-left: 25px;
+    }
+
+    .Music {
+      font-size: 1.1rem;
+      margin: 5px 0 0 5px;
+    }
+    .Artist {
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-left: 5px;
+    }
+  }
 `;
 
 export const Img = styled.div`
@@ -40,5 +62,14 @@ export const Img = styled.div`
     border-radius: 25px;
     background-size: 200px 190px;
     background-repeat: no-repeat;
+  }
+  @media ${device.mobile} {
+    div {
+      border-radius: 15px;
+      max-width: 155px;
+      max-height: 145px;
+      min-width: 155px;
+      min-height: 145px;
+    }
   }
 `;
