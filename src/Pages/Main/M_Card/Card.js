@@ -1,10 +1,15 @@
 import React from "react";
 import * as S from "./Style";
+import { useNavigate } from "react-router-dom";
+const Card = ({ word, img, name }) => {
+  const navigate = useNavigate();
+  const navigateClick = () => {
+    navigate("/recommend-list", { state: { list: name } });
+  };
 
-const Card = ({ word, img }) => {
   return (
     <>
-      <S.Card>
+      <S.Card onClick={navigateClick}>
         <S.Img>
           <img src={img} alt="test" />
         </S.Img>
