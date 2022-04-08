@@ -7,12 +7,12 @@ import Mobheader from "../../Components/mobile_header/Mob_header";
 
 const Addlist = ({}) => {
   const location = useLocation();
-
-  console.log(location.state.mbti);
+  console.log(location);
+  console.log("mbti : ", location.state.list);
   const navigate = useNavigate();
-  function navigateClick() {
-    navigate("/recommend-list", { state: { mbti: location.state.mbti } });
-  }
+  const navigateClick = () => {
+    navigate("/recommend-list", { state: { list: location.state.list } });
+  };
 
   return (
     <>
@@ -36,7 +36,7 @@ const Addlist = ({}) => {
               src={require("../../assets/mbtiImg.png")}
               alt="mbtibackimg"
             />
-            <span>{location.state.mbti}</span>
+            <span>{location.state.list}</span>
           </S.backImage>
           <div className="btn" onClick={navigateClick}>
             <S.Btn>
