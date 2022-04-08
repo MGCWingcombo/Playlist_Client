@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import * as S from "./Style";
 import Card from "./Card/Card";
 import Mobheader from "../../Components/mobile_header/Mob_header";
@@ -9,7 +9,7 @@ const Endmbti = () => {
   const [mbtis, setMbtis] = useState("");
   const [number, setNumber] = useState(1);
   const location = useLocation();
-  const props = location.state.mbti;
+  const props = location.state.list;
 
   useEffect(() => {
     const holder = async () => {
