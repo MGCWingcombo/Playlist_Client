@@ -1,16 +1,22 @@
 import React from "react";
 import { cardWord1, cardWord2, cardWord3 } from "./data";
 import { Cardlist, Contents } from "../../Style";
-import Card from "../../M_Card/Card";
-const repeat_Home_con = () => {
+import Card from "../Card";
+const Repeat_Home_con = () => {
   const word1 = cardWord1.map((list) => {
-    return <Card key={list.id} word={list.word} img={list.img} />;
+    return (
+      <Card key={list.id} word={list.word} img={list.img} name={list.name} />
+    );
   });
   const word2 = cardWord2.map((list) => {
-    return <Card key={list.id} word={list.word} img={list.img} />;
+    return (
+      <Card key={list.id} word={list.word} img={list.img} name={list.name} />
+    );
   });
   const word3 = cardWord3.map((list) => {
-    return <Card key={list.id} word={list.word} img={list.img} />;
+    return (
+      <Card key={list.id} word={list.word} img={list.img} name={list.name} />
+    );
   });
   return (
     <>
@@ -28,4 +34,4 @@ const repeat_Home_con = () => {
   );
 };
 
-export default repeat_Home_con;
+export default Repeat_Home_con;
