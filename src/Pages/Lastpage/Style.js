@@ -4,7 +4,7 @@ export const Rall = styled.div`
   background: #f9f9f9;
   height: 100vh;
   @media ${device.mobile} {
-    height: 300vh;
+    height: 800px;
   }
 `;
 
