@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Card = ({ word, img, name, otherbtn }) => {
   const navigate = useNavigate();
   const navigateClick = () => {
-    navigate("/recommend-list", { state: { list: name, otherbtn } });
+    navigate("/recommend-list", { state: { list: name, otherbtn, word } });
   };
 
   return (

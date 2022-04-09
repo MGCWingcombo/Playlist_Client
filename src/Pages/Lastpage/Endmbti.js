@@ -11,6 +11,7 @@ const Endmbti = () => {
   const location = useLocation();
   const props = location.state.list;
   const otherbtn = location.state.otherbtn;
+  const word = location.state.word;
   useEffect(() => {
     const holder = async () => {
       try {
@@ -63,7 +64,11 @@ const Endmbti = () => {
       <S.All>
         <S.Content>
           <S.Top>
-            <S.Ment>{props}를 위한 플레이리스트</S.Ment>
+            <S.Ment>
+              {otherbtn
+                ? `${word} 듣기 좋은 플레이리스트`
+                : `${props}를 위한 플레이리스트`}
+            </S.Ment>
             <S.Button onClick={dataplus}>더보기</S.Button>
           </S.Top>
           <S.Data>
