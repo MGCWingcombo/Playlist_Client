@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import * as S from "./Style";
 import Card from "./Card/Card";
 import Mobheader from "../../Components/mobile_header/Mob_header";
@@ -10,7 +10,7 @@ const Endmbti = () => {
   const [number, setNumber] = useState(1);
   const location = useLocation();
   const props = location.state.list;
-
+  const otherbtn = location.state.otherbtn;
   useEffect(() => {
     const holder = async () => {
       try {
@@ -119,7 +119,9 @@ const Endmbti = () => {
             </S.Contents>
           </S.Data>
           <a className="btn" href="/">
-            <S.Btn>MBTI 검사 다시하기</S.Btn>
+            <S.Btn>
+              {otherbtn ? "다른 플레이리스트 보러가기" : "MBTI 검사 다시하기"}
+            </S.Btn>
           </a>
         </S.Content>
       </S.All>

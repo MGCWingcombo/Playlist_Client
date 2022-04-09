@@ -104,8 +104,8 @@ const ChoiceBtn = ({ number, getNumber }) => {
   }, []);
 
   const navigate = useNavigate();
-  const navigateClick = (mbtiword) => {
-    navigate("/mbti-result", { state: { list: mbtiword } });
+  const navigateClick = (mbtiword, otherbtn) => {
+    navigate("/mbti-result", { state: { list: mbtiword, otherbtn } });
   };
 
   const TextBtntop = useMemo(() => BtnText(number), [number]);
@@ -189,7 +189,8 @@ const ChoiceBtn = ({ number, getNumber }) => {
           }
           const mbti = [IE + NS + FT + JP];
           console.log(mbti[0]);
-          navigateClick(mbti[0]);
+          const otherbtn = false;
+          navigateClick(mbti, otherbtn);
 
           console.log("A = ", IE);
           console.log("B = ", NS);
@@ -271,8 +272,8 @@ const ChoiceBtn = ({ number, getNumber }) => {
             JP = "P";
           }
           const mbti = [IE + NS + FT + JP];
-
-          navigateClick(mbti);
+          const otherbtn = false;
+          navigateClick(mbti, otherbtn);
           console.log("A = ", IE);
           console.log("B = ", NS);
           console.log("C = ", FT);

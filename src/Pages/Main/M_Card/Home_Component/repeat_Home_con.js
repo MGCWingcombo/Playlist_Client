@@ -10,7 +10,7 @@ const Repeat_Home_con = () => {
         word={list.word}
         img={list.img}
         name={list.name}
-        mbti={false}
+        otherbtn={true}
       />
     );
   });
@@ -21,7 +21,7 @@ const Repeat_Home_con = () => {
         word={list.word}
         img={list.img}
         name={list.name}
-        mbti={false}
+        otherbtn={true}
       />
     );
   });
@@ -32,7 +32,7 @@ const Repeat_Home_con = () => {
         word={list.word}
         img={list.img}
         name={list.name}
-        mbti={false}
+        otherbtn={true}
       />
     );
   });
