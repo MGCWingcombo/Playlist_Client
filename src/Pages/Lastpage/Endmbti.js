@@ -16,6 +16,8 @@ const Endmbti = () => {
       try {
         const res = await axios(`http://52.78.85.15:8080/playlist/${props}`);
         setMbtis(res.data.data);
+        console.log(location.state.mbti);
+        console.log(location);
       } catch (error) {
         console.error(error);
       }

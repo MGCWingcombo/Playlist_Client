@@ -5,17 +5,35 @@ import Card from "../Card";
 const Repeat_Home_con = () => {
   const word1 = cardWord1.map((list) => {
     return (
-      <Card key={list.id} word={list.word} img={list.img} name={list.name} />
+      <Card
+        key={list.id}
+        word={list.word}
+        img={list.img}
+        name={list.name}
+        mbti={false}
+      />
     );
   });
   const word2 = cardWord2.map((list) => {
     return (
-      <Card key={list.id} word={list.word} img={list.img} name={list.name} />
+      <Card
+        key={list.id}
+        word={list.word}
+        img={list.img}
+        name={list.name}
+        mbti={false}
+      />
     );
   });
   const word3 = cardWord3.map((list) => {
     return (
-      <Card key={list.id} word={list.word} img={list.img} name={list.name} />
+      <Card
+        key={list.id}
+        word={list.word}
+        img={list.img}
+        name={list.name}
+        mbti={false}
+      />
     );
   });
   return (
