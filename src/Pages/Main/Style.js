@@ -5,7 +5,7 @@ export const Content = styled.div`
   height: 1570px;
   @media ${device.mobile} {
     margin-top: 50px;
-    height: 1160px;
+    height: 1100px;
   }
 `;
 

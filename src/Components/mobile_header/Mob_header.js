@@ -18,10 +18,12 @@ const Mob_header = ({ prevBtn }) => {
           </S.PrevBtn>
         )}
         <S.Logo>
-          <img
-            src={require("../../assets/playlistlogo.png")}
-            alt="playlistlogo"
-          />
+          <a href="/">
+            <img
+              src={require("../../assets/playlistlogo.png")}
+              alt="playlistlogo"
+            />
+          </a>
         </S.Logo>
       </S.Header>
     </>

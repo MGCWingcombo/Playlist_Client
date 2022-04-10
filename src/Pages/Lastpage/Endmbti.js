@@ -17,8 +17,9 @@ const Endmbti = () => {
       try {
         const res = await axios(`http://52.78.85.15:8080/playlist/${props}`);
         setMbtis(res.data.data);
-        console.log(location.state.mbti);
-        console.log(location);
+        // console.log(location.state.mbti);
+        // console.log(location);
+        console.log(props);
       } catch (error) {
         console.error(error);
       }
@@ -69,7 +70,7 @@ const Endmbti = () => {
                 ? `${word} 듣기 좋은 플레이리스트`
                 : `${props}를 위한 플레이리스트`}
             </S.Ment>
-            <S.Button onClick={dataplus}>더보기</S.Button>
+            {mbtis && <S.Button onClick={dataplus}>더보기</S.Button>}
           </S.Top>
           <S.Data>
             <div className="mobileview">
