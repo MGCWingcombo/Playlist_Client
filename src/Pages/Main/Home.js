@@ -23,17 +23,10 @@ const Home = () => {
         <S.Header>
           <S.Logo>
             <a href="/">
-              {isDarkMode ? (
-                <img
-                  src={require("../../assets/playlistlogo.png")}
-                  alt="playlistlogo"
-                />
-              ) : (
-                <img
-                  src={require("../../assets/playlistlogo_white.png")}
-                  alt="playlistlogo_white"
-                />
-              )}
+              <img
+                src={require("../../assets/playlistlogo.png")}
+                alt="playlistlogo"
+              />
             </a>
           </S.Logo>
 
