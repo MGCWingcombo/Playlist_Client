@@ -11,16 +11,29 @@ const Home = () => {
     navigate("/mbti");
   }
 
+  const isDarkMode = () =>
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  console.log(isDarkMode());
+
   return (
     <>
       <S.Content>
         <S.Header>
           <S.Logo>
             <a href="/">
-              <img
-                src={require("../../assets/playlistlogo.png")}
-                alt="playlistlogo"
-              />
+              {isDarkMode ? (
+                <img
+                  src={require("../../assets/playlistlogo.png")}
+                  alt="playlistlogo"
+                />
+              ) : (
+                <img
+                  src={require("../../assets/playlistlogo_white.png")}
+                  alt="playlistlogo_white"
+                />
+              )}
             </a>
           </S.Logo>
 
