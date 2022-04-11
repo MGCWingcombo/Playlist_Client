@@ -19,7 +19,7 @@ const Endmbti = () => {
         setMbtis(res.data.data);
         // console.log(location.state.mbti);
         // console.log(location);
-        console.log(props);
+        console.log(res.data.data);
       } catch (error) {
         console.error(error);
       }
@@ -55,12 +55,14 @@ const Endmbti = () => {
 
   return (
     <S.Rall>
-      <S.Logo>
-        <img
-          src={require("../../assets/playlistlogo.png")}
-          alt="playlistlogo"
-        />
-      </S.Logo>
+      <a href="/">
+        <S.Logo>
+          <img
+            src={require("../../assets/playlistlogo.png")}
+            alt="playlistlogo"
+          />
+        </S.Logo>
+      </a>
       <Mobheader prevBtn={true} />
       <S.All>
         <S.Content>
