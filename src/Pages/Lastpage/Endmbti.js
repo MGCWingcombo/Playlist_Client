@@ -12,10 +12,12 @@ const Endmbti = () => {
   const props = location.state.list;
   const otherbtn = location.state.otherbtn;
   const word = location.state.word;
+  const API_KEY = process.env.REACT_APP_PLAYLIST_KEY;
+  const url = `${API_KEY}${props}`;
   useEffect(() => {
     const holder = async () => {
       try {
-        const res = await axios(`http://52.78.85.15:8080/playlist/${props}`);
+        const res = await axios(url);
         setMbtis(res.data.data);
         // console.log(location.state.mbti);
         // console.log(location);
