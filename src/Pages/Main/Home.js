@@ -15,14 +15,15 @@ const Home = () => {
     <>
       <S.Content>
         <S.Header>
-          <a href="/">
-            <S.Logo>
+          <S.Logo>
+            <a href="/">
               <img
                 src={require("../../assets/playlistlogo.png")}
                 alt="playlistlogo"
               />
-            </S.Logo>
-          </a>
+            </a>
+          </S.Logo>
+
           <S.Button onClick={mbtitest}>MBTI 검사하기</S.Button>
         </S.Header>
         {/* 데스크톱 헤더 */}

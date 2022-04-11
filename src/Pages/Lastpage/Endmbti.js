@@ -55,14 +55,15 @@ const Endmbti = () => {
 
   return (
     <S.Rall>
-      <a href="/">
-        <S.Logo>
+      <S.Logo>
+        <a href="/">
           <img
             src={require("../../assets/playlistlogo.png")}
             alt="playlistlogo"
           />
-        </S.Logo>
-      </a>
+        </a>
+      </S.Logo>
+
       <Mobheader prevBtn={true} />
       <S.All>
         <S.Content>

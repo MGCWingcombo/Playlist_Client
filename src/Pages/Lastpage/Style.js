@@ -4,18 +4,19 @@ export const Rall = styled.div`
   background: #f9f9f9;
   height: 100vh;
   @media ${device.mobile} {
-    height: 800px;
+    height: 820px;
+    position: fixed;
   }
 `;
 
 export const Logo = styled.div`
   width: 220px;
   height: 65px;
+  padding-top: 3vh;
+  padding-left: 5vw;
   img {
     width: 220px;
     height: 65px;
-    padding-top: 3vh;
-    padding-left: 5vw;
   }
   @media ${device.mobile} {
     display: none;
@@ -25,7 +26,10 @@ export const Logo = styled.div`
 export const All = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 10px;
+  @media ${device.mobile} {
+    margin-top: 50px;
+  }
 `;
 
 export const Content = styled.div`
@@ -34,9 +38,9 @@ export const Content = styled.div`
   .btn {
     margin: 40px auto 0px;
   }
-  @media ${device.mobile} {
+  /* @media ${device.mobile} {
     padding: 0 20px;
-  }
+  } */
 `;
 
 export const Top = styled.div`
