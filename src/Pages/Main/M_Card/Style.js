@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import device from "../../../styleds/constant";
 export const Card = styled.div`
-  min-width: 275px;
+  min-width: 245px;
 
-  min-height: 310px;
+  min-height: 280px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #b6b6b6;
   margin: 18px 2.4vw;
@@ -15,7 +15,7 @@ export const Card = styled.div`
 
   .card_sentence {
     font-family: "Prompt";
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: #000000;
     display: flex;
@@ -41,8 +41,8 @@ export const Card = styled.div`
 export const Img = styled.div`
   margin-top: 10px;
   img {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
 
   @media ${device.mobile} {

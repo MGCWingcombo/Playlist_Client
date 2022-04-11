@@ -11,7 +11,7 @@ export const Content = styled.div`
 
 export const Header = styled.header`
   width: 100%;
-  height: 140px;
+  height: 90px;
   background: #fdfdfd;
   box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.1);
   display: flex;
@@ -27,8 +27,8 @@ export const Header = styled.header`
 
 export const Logo = styled.div`
   img {
-    width: 230px;
-    height: 70px;
+    width: 200px;
+    height: 60px;
   }
   margin-right: 500px;
 `;
@@ -57,7 +57,7 @@ export const Contents = styled.div`
     font-size: 1.5rem;
     font-weight: 700;
     padding-top: 30px;
-    padding-left: 6.68vw;
+    padding-left: 10vw;
   }
   @media ${device.mobile} {
     padding: 0 5px;
