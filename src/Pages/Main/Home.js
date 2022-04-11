@@ -41,6 +41,37 @@ const Home = () => {
 
         <RepeatHomeCon />
         {/* 콘텐츠 */}
+        <S.Footer>
+          <p className="copyright">© 2022 PLAYLIST. All Rights Reserved</p>
+          <br />
+          <p>
+            <a
+              href="https://github.com/MGCWingcombo"
+              target="_blank"
+              rel="noreferrer"
+            >
+              About{" "}
+            </a>
+            |
+            <a
+              href="https://github.com/MGCWingcombo/Playlist_Client/blob/master/LICENSE"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              Lisence{" "}
+            </a>
+            |
+            <a
+              href="https://github.com/MGCWingcombo"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              Github and issue
+            </a>
+          </p>
+        </S.Footer>
       </S.Content>
     </>
   );

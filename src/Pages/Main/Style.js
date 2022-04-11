@@ -5,7 +5,7 @@ export const Content = styled.div`
   height: 1570px;
   @media ${device.mobile} {
     margin-top: 50px;
-    height: 1100px;
+    height: 1170px;
   }
 `;
 
@@ -89,7 +89,7 @@ export const Condition_Contents = styled.div`
     font-size: 1.1rem;
     font-weight: 700;
     padding-top: 3vh;
-    padding-left: 3.7vh;
+    padding-left: 10vw;
     margin-bottom: 0;
   }
   @media ${device.mobile} {
@@ -98,8 +98,35 @@ export const Condition_Contents = styled.div`
 `;
 
 export const Btn = styled.div`
-  padding-left: 1.5vh;
   img {
     width: 43vh;
+  }
+  display: flex;
+  justify-content: center;
+`;
+
+export const Footer = styled.footer`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  white-space: nowrap;
+  margin: 0;
+  padding: 40px 30px 0 0;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  p {
+    margin: 0;
+  }
+  font-size: 0.9rem;
+
+  @media ${device.mobile} {
+    display: flex;
+
+    align-items: center;
+    padding: 0;
+    padding: 40px 0 0 0;
+    font-size: 0.75rem;
   }
 `;
