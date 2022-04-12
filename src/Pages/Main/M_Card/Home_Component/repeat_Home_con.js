@@ -40,9 +40,7 @@ const Repeat_Home_con = () => {
     <>
       <Contents>
         <p className="subtitle">계절로 알아보는 플레이리스트</p>
-        <div>
-          <Cardlist>{word1}</Cardlist>
-        </div>
+        <Cardlist>{word1}</Cardlist>
         <p className="subtitle">날씨로 알아보는 플레이리스트</p>
         <Cardlist>{word2}</Cardlist>
         <p className="subtitle">기분으로 알아보는 플레이리스트</p>
