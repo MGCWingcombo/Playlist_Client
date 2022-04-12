@@ -108,14 +108,23 @@ export const Btn = styled.button`
   font-family: "Nanum Gothic";
   font-weight: 700;
   font-size: 1.5rem;
-  color: #ffffff;
-  background: #6578a7;
-  border: 1px solid #6578a7;
+  color: #6578a7;
+  background: #ffffff;
+  border: 2px solid;
+  border-color: #6578a7;
   border-radius: 50px;
 
   width: 400px;
   height: 60px;
   cursor: pointer;
+
+  :hover {
+    color: ${(p) => p.fontcolor || null};
+    background: ${(p) => p.btncolor || null};
+    border-color: ${(p) => p.bordercolor || null};
+    transition-duration: 0.3s;
+  }
+
   @media ${device.mobile} {
     width: 300px;
     height: 40px;
