@@ -54,10 +54,10 @@ export const Contents = styled.div`
 
   .subtitle {
     font-family: "Prompt";
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     padding-top: 30px;
-    padding-left: 10vw;
+    padding-left: 12vw;
   }
   @media ${device.mobile} {
     padding: 0 5px;

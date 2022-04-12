@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import device from "../../../styleds/constant";
 export const Card = styled.div`
-  min-width: 245px;
+  min-width: 230px;
 
-  min-height: 280px;
+  min-height: 265px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #b6b6b6;
   margin: 18px 2.4vw;
@@ -41,8 +41,8 @@ export const Card = styled.div`
 export const Img = styled.div`
   margin-top: 10px;
   img {
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
   }
 
   @media ${device.mobile} {
