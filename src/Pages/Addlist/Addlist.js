@@ -18,9 +18,7 @@ const Addlist = ({}) => {
     <>
       <S.Content>
         <Mobheader prevBtn={true} />
-        <div className="left">
-          <SideMbti />
-        </div>
+
         <S.Contents>
           <S.Ment>
             <div>
@@ -44,9 +42,6 @@ const Addlist = ({}) => {
             </S.Btn>
           </div>
         </S.Contents>
-        <div className="right">
-          <SideMbti />
-        </div>
       </S.Content>
     </>
   );
