@@ -12,6 +12,7 @@ const Endmbti = () => {
   const props = location.state.list;
   const otherbtn = location.state.otherbtn;
   const word = location.state.word;
+
   const API_KEY = process.env.REACT_APP_PLAYLIST_KEY;
   const url = `${API_KEY}${props}`;
   useEffect(() => {
@@ -21,6 +22,7 @@ const Endmbti = () => {
         setMbtis(res.data.data);
         // console.log(location.state.mbti);
         // console.log(location);
+        console.log(API_KEY);
         console.log(res.data.data);
       } catch (error) {
         console.error(error);
@@ -130,7 +132,7 @@ const Endmbti = () => {
             </S.Contents>
           </S.Data>
           <a className="btn" href="/">
-            <S.Btn>
+            <S.Btn fontcolor="#ffffff" btncolor="#6578a7" bordercolor="#6578a7">
               {otherbtn ? "다른 플레이리스트 보러가기" : "MBTI 검사 다시하기"}
             </S.Btn>
           </a>
