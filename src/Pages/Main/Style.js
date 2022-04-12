@@ -11,13 +11,13 @@ export const Content = styled.div`
 
 export const Header = styled.header`
   width: 100%;
-  height: 90px;
+  height: 80px;
   background: #fdfdfd;
   box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.1);
   display: flex;
   position: fixed;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   @media ${device.mobile} {
@@ -26,19 +26,19 @@ export const Header = styled.header`
 `;
 
 export const Logo = styled.div`
+  margin-left: 5vh;
   img {
-    width: 200px;
-    height: 60px;
+    width: 180px;
+    height: 50px;
   }
-  margin-right: 500px;
 `;
 
 export const Button = styled.button`
-  margin-left: 500px;
+  margin-right: 5vh;
   font-family: "Prompt";
-  width: 210px;
+  width: 160px;
   height: 45px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: white;
   background: #6578a7;
   border: 1px solid #6578a7;
