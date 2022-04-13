@@ -44,7 +44,7 @@ export const Content = styled.div`
 export const Top = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+
   @media ${device.mobile} {
     justify-content: center;
     margin-top: 90px;
