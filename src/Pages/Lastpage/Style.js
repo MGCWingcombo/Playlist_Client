@@ -26,7 +26,7 @@ export const Logo = styled.div`
 export const All = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+
   @media ${device.mobile} {
     margin-top: 50px;
   }
@@ -35,8 +35,9 @@ export const All = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
+
   .btn {
-    margin: 40px auto 0px;
+    margin: 35px auto 0px;
   }
 `;
 
