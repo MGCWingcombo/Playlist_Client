@@ -12,7 +12,7 @@ const Card = ({ word, img, name, otherbtn }) => {
         <S.Img>
           <img src={img} alt="test" />
         </S.Img>
-        <p className="card_sentence">{word} 듣기 좋은 플레이리스트</p>
+        <p className="card_sentence">{word} 추천 플레이리스트</p>
       </S.Card>
     </>
   );

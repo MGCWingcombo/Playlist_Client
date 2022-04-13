@@ -2,7 +2,7 @@ import styled from "styled-components";
 import device from "../../styleds/constant";
 export const Content = styled.div`
   width: 100%;
-  height: 1570px;
+  height: 1500px;
   @media ${device.mobile} {
     margin-top: 50px;
     height: 1170px;

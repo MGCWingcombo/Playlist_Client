@@ -1,31 +1,31 @@
 export const cardWord1 = [
   {
     id: 1,
-    word: "지금 계절에",
+    word: "지금 계절",
     name: "today-season",
     img: require("../../../../assets/HomeCardImg/one.png"),
   },
   {
     id: 2,
-    word: "봄에",
+    word: "봄",
     name: "spring",
     img: require("../../../../assets/HomeCardImg/two.png"),
   },
   {
     id: 3,
-    word: "여름에",
+    word: "여름",
     name: "summer",
     img: require("../../../../assets/HomeCardImg/three.png"),
   },
   {
     id: 4,
-    word: "가을에",
+    word: "가을",
     name: "autumn",
     img: require("../../../../assets/HomeCardImg/four.png"),
   },
   {
     id: 5,
-    word: "겨울에",
+    word: "겨울",
     name: "winter",
     img: require("../../../../assets/HomeCardImg/five.png"),
   },
@@ -34,7 +34,7 @@ export const cardWord1 = [
 export const cardWord2 = [
   {
     id: 6,
-    word: "지금 날씨에",
+    word: "지금 날씨",
     name: "today-weather",
     img: require("../../../../assets/HomeCardImg/six.png"),
   },

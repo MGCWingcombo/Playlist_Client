@@ -132,7 +132,7 @@ const Endmbti = () => {
             </S.Contents>
           </S.Data>
           <a className="btn" href="/">
-            <S.Btn fontcolor="#ffffff" btncolor="#6578a7" bordercolor="#6578a7">
+            <S.Btn fontcolor="#6578a7" btncolor="#ffffff" bordercolor="#6578a7">
               {otherbtn ? "다른 플레이리스트 보러가기" : "MBTI 검사 다시하기"}
             </S.Btn>
           </a>

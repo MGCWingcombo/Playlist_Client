@@ -38,9 +38,6 @@ export const Content = styled.div`
   .btn {
     margin: 40px auto 0px;
   }
-  /* @media ${device.mobile} {
-    padding: 0 20px;
-  } */
 `;
 
 export const Top = styled.div`
@@ -108,8 +105,8 @@ export const Btn = styled.button`
   font-family: "Nanum Gothic";
   font-weight: 700;
   font-size: 1.5rem;
-  color: #6578a7;
-  background: #ffffff;
+  color: #ffffff;
+  background: #6578a7;
   border: 2px solid;
   border-color: #6578a7;
   border-radius: 50px;
