@@ -17,7 +17,6 @@ const Addlist = ({}) => {
     <>
       <S.Content>
         <Mobheader prevBtn={true} />
-
         <S.Contents>
           <S.Ment>
             <div>
