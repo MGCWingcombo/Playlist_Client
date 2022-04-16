@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./Style";
 import { useNavigate } from "react-router-dom";
-import Mob_header from "../../Components/mobile_header/Mob_header";
+import Mobheader from "../../Components/Mobile_header/Mobheader";
 import RepeatHomeCon from "./M_Card/Home_Component/Repeat_Home_con";
 
 const Home = () => {
@@ -28,7 +28,7 @@ const Home = () => {
         </S.Header>
         {/* 데스크톱 헤더 */}
 
-        <Mob_header prevBtn={false} />
+        <Mobheader prevBtn={false} />
         {/* 모바일 헤더 */}
 
         <S.Condition_Contents>

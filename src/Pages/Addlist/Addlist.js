@@ -2,9 +2,9 @@ import React from "react";
 import * as S from "./Style";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import Mobheader from "../../Components/mobile_header/Mob_header";
+import Mobheader from "../../Components/Mobile_header/Mobheader";
 
-const Addlist = ({}) => {
+const Addlist = () => {
   const location = useLocation();
   console.log(location);
   console.log("mbti : ", location.state.list);

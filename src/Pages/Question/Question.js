@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 import ChoiceBtn from "./TextBtn/ChoiceBtn";
 import * as S from "./Style";
-import Mobheader from "../../Components/mobile_header/Mob_header";
+import Mobheader from "../../Components/Mobile_header/Mobheader";
 
 function nextText(number) {
   switch (number) {

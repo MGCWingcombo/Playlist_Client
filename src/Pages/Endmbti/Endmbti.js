@@ -3,7 +3,9 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import * as S from "./Style";
 import Card from "./Card/Card";
-import Mobheader from "../../Components/mobile_header/Mob_header";
+import Mobheader from "../../Components/Mobile_header/Mobheader";
+
+const API_KEY = process.env.REACT_APP_PLAYLIST_KEY;
 
 const Endmbti = () => {
   const [mbtis, setMbtis] = useState("");
@@ -13,7 +15,6 @@ const Endmbti = () => {
   const otherbtn = location.state.otherbtn;
   const word = location.state.word;
 
-  const API_KEY = process.env.REACT_APP_PLAYLIST_KEY;
   const url = `${API_KEY}${props}`;
   useEffect(() => {
     const holder = async () => {
@@ -22,7 +23,6 @@ const Endmbti = () => {
         setMbtis(res.data.data);
         // console.log(location.state.mbti);
         // console.log(location);
-        console.log(API_KEY);
         console.log(res.data.data);
       } catch (error) {
         console.error(error);
