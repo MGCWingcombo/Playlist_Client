@@ -18,7 +18,7 @@ const Home = () => {
           <S.Logo>
             <a href="/">
               <img
-                src={require("../../assets/playlistlogo.png")}
+                src={require("../../Assets/playlistlogo.png")}
                 alt="playlistlogo"
               />
             </a>
@@ -34,7 +34,7 @@ const Home = () => {
         <S.Condition_Contents>
           <p className="subtitle_mbti">MBTI로 알아보는 플레이리스트</p>
           <S.Btn onClick={mbtitest}>
-            <img src={require("../../assets/mbtiBtn.png")} alt="mbti_button" />
+            <img src={require("../../Assets/mbtiBtn.png")} alt="mbti_button" />
           </S.Btn>
         </S.Condition_Contents>
         {/* 모바일 버튼 */}

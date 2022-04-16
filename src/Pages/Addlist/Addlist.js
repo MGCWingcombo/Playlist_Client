@@ -1,6 +1,5 @@
 import React from "react";
 import * as S from "./Style";
-import SideMbti from "../../Components/SideMbti/SideMbti";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import Mobheader from "../../Components/mobile_header/Mob_header";
@@ -31,7 +30,7 @@ const Addlist = ({}) => {
           <S.backImage>
             <img
               className="img"
-              src={require("../../assets/mbtiImg.png")}
+              src={require("../../Assets/mbtiImg.png")}
               alt="mbtibackimg"
             />
             <span>{location.state.list}</span>

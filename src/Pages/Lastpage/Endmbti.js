@@ -62,7 +62,7 @@ const Endmbti = () => {
       <S.Logo>
         <a href="/">
           <img
-            src={require("../../assets/playlistlogo.png")}
+            src={require("../../Assets/playlistlogo.png")}
             alt="playlistlogo"
           />
         </a>
@@ -74,7 +74,7 @@ const Endmbti = () => {
           <S.Top>
             <S.Ment>
               {otherbtn
-                ? `${word} 듣기 좋은 플레이리스트`
+                ? `${word}에 듣기 좋은 플레이리스트`
                 : `${props}를 위한 플레이리스트`}
             </S.Ment>
             {mbtis && <S.Button onClick={dataplus}>더보기</S.Button>}

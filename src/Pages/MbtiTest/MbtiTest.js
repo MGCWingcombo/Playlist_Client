@@ -12,7 +12,7 @@ const MbtiTest = () => {
     <>
       <S.Content>
         <S.LeftImg>
-          <img src={require("../../assets/leftbuble.png")} alt="leftbuble" />
+          <img src={require("../../Assets/leftbuble.png")} alt="leftbuble" />
         </S.LeftImg>
         <S.Contents>
           <S.Ment>
@@ -25,7 +25,7 @@ const MbtiTest = () => {
           <S.backImage>
             <img
               className="img"
-              src={require("../../assets/TheBandShow.png")}
+              src={require("../../Assets/TheBandShow.png")}
               alt="teststartimg"
             />
           </S.backImage>
@@ -36,7 +36,7 @@ const MbtiTest = () => {
           </S.Btnwrap>
         </S.Contents>
         <S.RightImg>
-          <img src={require("../../assets/rightbuble.png")} alt="rightbuble" />
+          <img src={require("../../Assets/rightbuble.png")} alt="rightbuble" />
         </S.RightImg>
       </S.Content>
     </>

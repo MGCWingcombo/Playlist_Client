@@ -14,13 +14,13 @@ const Mob_header = ({ prevBtn }) => {
               navigate(-1);
             }}
           >
-            <img src={require("../../assets/chevron.png")} alt="chevron" />
+            <img src={require("../../Assets/chevron.png")} alt="chevron" />
           </S.PrevBtn>
         )}
         <S.Logo>
           <a href="/">
             <img
-              src={require("../../assets/playlistlogo.png")}
+              src={require("../../Assets/playlistlogo.png")}
               alt="playlistlogo"
             />
           </a>
