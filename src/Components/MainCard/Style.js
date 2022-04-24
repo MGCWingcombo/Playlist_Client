@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import device from "../../../Styles/constant";
+import device from "../../Styles/constant";
 export const Card = styled.div`
   min-width: 230px;
 

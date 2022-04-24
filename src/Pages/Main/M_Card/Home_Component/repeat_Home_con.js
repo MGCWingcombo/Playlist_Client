@@ -1,7 +1,7 @@
 import React from "react";
 import { cardWord1, cardWord2, cardWord3 } from "./data";
 import { Cardlist, Contents } from "../../Style";
-import Card from "../Card";
+import Card from "../../../../Components/MainCard/Card";
 const Repeat_Home_con = () => {
   const word1 = cardWord1.map((list) => {
     return (
