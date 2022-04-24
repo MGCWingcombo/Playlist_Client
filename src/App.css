@@ -2,37 +2,37 @@
   font-family: "Nanum Gothic";
   font-weight: 400;
   src: local("Nanum-Gothic"),
-    url("./styleds/fonts/AnyConv.com__NanumGothic-Regular.woff2")
+    url("./Styles/fonts/AnyConv.com__NanumGothic-Regular.woff2")
       format("font-woff2"),
-    url("./styleds/fonts/NanumGothic-Regular.woff") format("font-woff"),
-    url("./styleds/fonts/NanumGothic-Regular.ttf") format("truetype");
+    url("./Styles/fonts/NanumGothic-Regular.woff") format("font-woff"),
+    url("./Styles/fonts/NanumGothic-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Nanum Gothic";
   font-weight: 700;
   src: local("Nanum-Gothic"),
-    url("./styleds/fonts/AnyConv.com__NanumGothic-Bold.woff2")
+    url("./Styles/fonts/AnyConv.com__NanumGothic-Bold.woff2")
       format("font-woff2"),
-    url("./styleds/fonts/NanumGothic-Bold.woff") format("font-woff"),
-    url("./styleds/fonts/NanumGothic-Bold.ttf") format("truetype");
+    url("./Styles/fonts/NanumGothic-Bold.woff") format("font-woff"),
+    url("./Styles/fonts/NanumGothic-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Nanum Gothic";
   font-weight: 800;
   src: local("Nanum-Gothic"),
-    url("./styleds/fonts/AnyConv.com__NanumGothic-ExtraBold.woff2")
+    url("./Styles/fonts/AnyConv.com__NanumGothic-ExtraBold.woff2")
       format("font-woff2"),
-    url("./styleds/fonts/NanumGothic-ExtraBold.woff") format("font-woff"),
-    url("./styleds/fonts/NanumGothic-ExtraBold.ttf") format("truetype");
+    url("./Styles/fonts/NanumGothic-ExtraBold.woff") format("font-woff"),
+    url("./Styles/fonts/NanumGothic-ExtraBold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Prompt";
   src: local("Prompt"),
-    url("./styleds/fonts/AnyConv.com__Prompt-ExtraBold\ \(1\).woff2")
+    url("./Styles/fonts/AnyConv.com__Prompt-ExtraBold\ \(1\).woff2")
       format("font-woff2"),
-    url("./styleds/fonts/Prompt-ExtraBold.woff") format("font-woff"),
-    url("./styleds/fonts/Prompt-ExtraBold.ttf") format("truetype");
+    url("./Styles/fonts/Prompt-ExtraBold.woff") format("font-woff"),
+    url("./Styles/fonts/Prompt-ExtraBold.ttf") format("truetype");
 }

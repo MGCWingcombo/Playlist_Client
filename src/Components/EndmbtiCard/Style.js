@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import device from "../../../styleds/constant";
+import device from "../../Styles/constant";
 export const Contents = styled.div``;
 
 export const Card = styled.div`

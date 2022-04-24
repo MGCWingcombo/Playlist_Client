@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 import * as S from "./Style";
-import Card from "./Card/Card";
+import Card from "../../Components/EndmbtiCard/Card";
 import Mobheader from "../../Components/Mobile_header/Mobheader";
 
 const API_KEY = process.env.REACT_APP_PLAYLIST_KEY;
@@ -21,8 +21,6 @@ const Endmbti = () => {
       try {
         const res = await axios(url);
         setMbtis(res.data.data);
-        // console.log(location.state.mbti);
-        // console.log(location);
         console.log(res.data.data);
       } catch (error) {
         console.error(error);

@@ -6,7 +6,7 @@ import "./App.css";
 import Addlist from "./Pages/Addlist/Addlist";
 import Endmbti from "./Pages/Endmbti/Endmbti";
 import Question from "./Pages/Question/Question";
-import GlobalStyle from "./styleds/GlobalStyle";
+import GlobalStyle from "./Styles/GlobalStyle";
 
 function App() {
   return (

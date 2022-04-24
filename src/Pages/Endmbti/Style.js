@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import device from "../../styleds/constant";
+import device from "../../Styles/constant";
 export const Rall = styled.div`
   background: #f9f9f9;
   height: 100vh;
