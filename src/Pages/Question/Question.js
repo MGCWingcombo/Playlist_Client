@@ -1,9 +1,10 @@
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 import ChoiceBtn from "./TextBtn/ChoiceBtn";
 import * as S from "./Style";
 import Mobheader from "../../Components/Mobile_header/Mobheader";
 
-function nextText(number) {
+const nextText = (number) => {
+  console.log("I'm");
   switch (number) {
     case 1: {
       return (
@@ -78,14 +79,14 @@ function nextText(number) {
       return null;
     }
   }
-}
+};
 
 const Question = () => {
   const [number, setNumber] = useState(1);
 
-  const ShowState = useMemo(() => nextText(number), [number]);
-
+  const ShowState = nextText(number);
   const getNumber = () => {
+    console.log("hi");
     setNumber((number) => number + 1);
   };
 
