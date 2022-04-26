@@ -4,7 +4,6 @@ import * as S from "./Style";
 import Mobheader from "../../Components/Mobile_header/Mobheader";
 
 const nextText = (number) => {
-  console.log("I'm");
   switch (number) {
     case 1: {
       return (

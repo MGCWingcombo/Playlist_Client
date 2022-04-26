@@ -2,7 +2,8 @@ import React, { useState, useMemo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import * as S from "./TextBtnStyle";
 
-function BtnText2(number) {
+const BtnText2 = (number) => {
+  console.log("mo");
   switch (number) {
     case 1: {
       return "사람들과 만나서 즐거운 시간을 보낸다.";
@@ -44,9 +45,10 @@ function BtnText2(number) {
       return null;
     }
   }
-}
+};
 
-function BtnText(number) {
+const BtnText = (number) => {
+  console.log("min");
   switch (number) {
     case 1: {
       return "집에서 혼자만의 시간을 가진다.";
@@ -88,7 +90,7 @@ function BtnText(number) {
       return null;
     }
   }
-}
+};
 
 let IE = 0;
 let NS = 0;
@@ -97,6 +99,7 @@ let JP = 0;
 
 const ChoiceBtn = ({ number, getNumber }) => {
   useEffect(() => {
+    console.log("ChoiceBtn");
     IE = 0;
     NS = 0;
     FT = 0;
@@ -110,11 +113,14 @@ const ChoiceBtn = ({ number, getNumber }) => {
 
   const TextBtntop = useMemo(() => BtnText(number), [number]);
   const TextBtnbottom = useMemo(() => BtnText2(number), [number]);
+  // const TextBtntop = BtnText(number);
+  // const TextBtnbottom = BtnText2(number);
+
   const [alpha, setAlpha] = useState(null);
 
   setTimeout(() => setAlpha(number));
 
-  function click(btnid) {
+  const click = (btnid) => {
     const btnids = btnid.target.id;
     getNumber((number) => number + 1);
 
@@ -285,7 +291,7 @@ const ChoiceBtn = ({ number, getNumber }) => {
         }
       }
     }
-  }
+  };
 
   return (
     <>
