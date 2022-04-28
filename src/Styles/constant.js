@@ -1,3 +1,7 @@
+// interface size {
+//   mobile: string;
+// }
+
 const size = {
   mobile: "600px",
 };
