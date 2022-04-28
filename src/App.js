@@ -8,7 +8,7 @@ import Endmbti from "./Pages/Endmbti/Endmbti";
 import Question from "./Pages/Question/Question";
 import GlobalStyle from "./Styles/GlobalStyle";
 
-function App() {
+const App = () => {
   return (
     <div>
       <GlobalStyle />
@@ -23,6 +23,6 @@ function App() {
       </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
