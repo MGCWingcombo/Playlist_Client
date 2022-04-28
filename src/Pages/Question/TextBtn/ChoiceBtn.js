@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import * as S from "./TextBtnStyle";
 
 const BtnText2 = (number) => {
-  console.log("mo");
+  // console.log("mo");
   switch (number) {
     case 1: {
       return "사람들과 만나서 즐거운 시간을 보낸다.";
@@ -48,7 +48,7 @@ const BtnText2 = (number) => {
 };
 
 const BtnText = (number) => {
-  console.log("min");
+  // console.log("min");
   switch (number) {
     case 1: {
       return "집에서 혼자만의 시간을 가진다.";
@@ -113,8 +113,6 @@ const ChoiceBtn = ({ number, getNumber }) => {
 
   const TextBtntop = useMemo(() => BtnText(number), [number]);
   const TextBtnbottom = useMemo(() => BtnText2(number), [number]);
-  // const TextBtntop = BtnText(number);
-  // const TextBtnbottom = BtnText2(number);
 
   const [alpha, setAlpha] = useState(null);
 
@@ -123,7 +121,7 @@ const ChoiceBtn = ({ number, getNumber }) => {
   const click = (btnid) => {
     const btnids = btnid.target.id;
     getNumber((number) => number + 1);
-
+    console.log(btnids);
     if (btnids == "topbtn") {
       switch (alpha) {
         case 1: {
