@@ -30,7 +30,7 @@ const Endmbti = () => {
     holder();
   }, []);
 
-  function dataplus() {
+  const dataplus = () => {
     setNumber((num) => num + 1);
 
     const data1 = document.getElementById("first_data");
@@ -53,7 +53,7 @@ const Endmbti = () => {
       default:
         return null;
     }
-  }
+  };
 
   return (
     <S.Rall>

@@ -7,9 +7,9 @@ import RepeatHomeCon from "./M_Card/Home_Component/Repeat_Home_con";
 const Home = () => {
   const navigate = useNavigate();
 
-  function mbtitest() {
+  const mbtitest = () => {
     navigate("/mbti");
-  }
+  };
 
   return (
     <>

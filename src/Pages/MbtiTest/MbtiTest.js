@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 
 const MbtiTest = () => {
   const navigate = useNavigate();
-  function navigateClick() {
+  const navigateClick = () => {
     navigate("/mbti-test");
-  }
+  };
 
   return (
     <>
