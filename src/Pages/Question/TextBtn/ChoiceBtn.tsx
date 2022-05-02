@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import * as S from "./TextBtnStyle";
 
-const BtnText2 = (number) => {
+const BtnText2 = (number: number): string | null => {
   // console.log("mo");
   switch (number) {
     case 1: {
@@ -47,7 +47,7 @@ const BtnText2 = (number) => {
   }
 };
 
-const BtnText = (number) => {
+const BtnText = (number: number): string | null => {
   // console.log("min");
   switch (number) {
     case 1: {
@@ -92,12 +92,22 @@ const BtnText = (number) => {
   }
 };
 
-let IE = 0;
-let NS = 0;
-let FT = 0;
-let JP = 0;
+let IE: number = 0;
+let NS: number = 0;
+let FT: number = 0;
+let JP: number = 0;
 
-const ChoiceBtn = ({ number, getNumber }) => {
+let firstMbti: string = "";
+let secondMbti: string = "";
+let thirdMbti: string = "";
+let forceMbti: string = "";
+
+interface ChoiceBtn {
+  number: number;
+  getNumber: any;
+}
+
+const ChoiceBtn = ({ number, getNumber }: ChoiceBtn) => {
   useEffect(() => {
     console.log("ChoiceBtn");
     IE = 0;
@@ -107,20 +117,20 @@ const ChoiceBtn = ({ number, getNumber }) => {
   }, []);
 
   const navigate = useNavigate();
-  const navigateClick = (mbtiword, otherbtn) => {
+  const navigateClick = (mbtiword: string[], otherbtn: boolean) => {
     navigate("/mbti-result", { state: { list: mbtiword, otherbtn } });
   };
 
-  const TextBtntop = useMemo(() => BtnText(number), [number]);
-  const TextBtnbottom = useMemo(() => BtnText2(number), [number]);
+  const TextBtntop: any = useMemo(() => BtnText(number), [number]);
+  const TextBtnbottom: any = useMemo(() => BtnText2(number), [number]);
 
-  const [alpha, setAlpha] = useState(null);
+  const [alpha, setAlpha] = useState<number>();
 
   setTimeout(() => setAlpha(number));
 
-  const click = (btnid) => {
-    const btnids = btnid.target.id;
-    getNumber((number) => number + 1);
+  const click: React.MouseEventHandler<HTMLButtonElement> = (btnid: any) => {
+    const btnids: string = btnid.target.id;
+    getNumber((number: number) => number + 1);
     console.log(btnids);
     if (btnids == "topbtn") {
       switch (alpha) {
@@ -172,26 +182,26 @@ const ChoiceBtn = ({ number, getNumber }) => {
           FT += 1;
 
           if (IE >= 1) {
-            IE = "I";
+            firstMbti = "I";
           } else if (IE <= -1) {
-            IE = "E";
+            firstMbti = "E";
           }
           if (NS >= 1) {
-            NS = "S";
+            secondMbti = "S";
           } else if (NS <= -1) {
-            NS = "N";
+            secondMbti = "N";
           }
           if (FT >= 1) {
-            FT = "F";
+            thirdMbti = "F";
           } else if (FT <= -1) {
-            FT = "T";
+            thirdMbti = "T";
           }
           if (JP >= 1) {
-            JP = "J";
+            forceMbti = "J";
           } else if (JP <= -1) {
-            JP = "P";
+            forceMbti = "P";
           }
-          const mbti = [IE + NS + FT + JP];
+          const mbti = [firstMbti + secondMbti + thirdMbti + forceMbti];
           console.log(mbti[0]);
           const otherbtn = false;
           navigateClick(mbti, otherbtn);
@@ -256,28 +266,30 @@ const ChoiceBtn = ({ number, getNumber }) => {
           FT -= 1;
 
           if (IE >= 1) {
-            IE = "I";
+            firstMbti = "I";
           } else if (IE <= -1) {
-            IE = "E";
+            firstMbti = "E";
           }
           if (NS >= 1) {
-            NS = "S";
+            secondMbti = "S";
           } else if (NS <= -1) {
-            NS = "N";
+            secondMbti = "N";
           }
           if (FT >= 1) {
-            FT = "F";
+            thirdMbti = "F";
           } else if (FT <= -1) {
-            FT = "T";
+            thirdMbti = "T";
           }
           if (JP >= 1) {
-            JP = "J";
+            forceMbti = "J";
           } else if (JP <= -1) {
-            JP = "P";
+            forceMbti = "P";
           }
-          const mbti = [IE + NS + FT + JP];
-          const otherbtn = false;
-          navigateClick(mbti, otherbtn);
+          const mbtiword: string[] = [
+            firstMbti + secondMbti + thirdMbti + forceMbti,
+          ];
+          const otherbtn: boolean = false;
+          navigateClick(mbtiword, otherbtn);
           console.log("A = ", IE);
           console.log("B = ", NS);
           console.log("C = ", FT);

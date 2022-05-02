@@ -7,18 +7,6 @@ interface Cards extends cardWord {
   otherbtn: boolean;
 }
 
-// interface hi {
-//   id: number;
-//   word: string;
-//   name: string;
-//   img: any;
-//   otherbtn: boolean;
-// }
-
-// interface cardWord {
-//   otherbtn: boolean;
-// }
-
 const Card = ({ word, img, name, otherbtn }: Cards) => {
   const navigate = useNavigate();
   const navigateClick = () => {

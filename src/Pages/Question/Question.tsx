@@ -3,7 +3,7 @@ import ChoiceBtn from "./TextBtn/ChoiceBtn";
 import * as S from "./Style";
 import Mobheader from "../../Components/Mobile_header/Mobheader";
 
-const nextText = (number) => {
+const nextText = (number: number) => {
   switch (number) {
     case 1: {
       return (
@@ -81,7 +81,7 @@ const nextText = (number) => {
 };
 
 const Question = () => {
-  const [number, setNumber] = useState(1);
+  const [number, setNumber] = useState<number>(1);
 
   const ShowState = nextText(number);
   const getNumber = () => {

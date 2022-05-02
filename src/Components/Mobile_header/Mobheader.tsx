@@ -2,7 +2,7 @@ import React from "react";
 import * as S from "./Style";
 import { useNavigate } from "react-router-dom";
 
-const Mobheader = ({ prevBtn }) => {
+const Mobheader = ({ prevBtn }: any) => {
   const navigate = useNavigate();
 
   return (
