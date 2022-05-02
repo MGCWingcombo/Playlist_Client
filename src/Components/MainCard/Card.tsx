@@ -1,7 +1,25 @@
 import React from "react";
 import * as S from "./Style";
 import { useNavigate } from "react-router-dom";
-const Card = ({ word, img, name, otherbtn }: any): any => {
+import { cardWord } from "../../Pages/Main/M_Card/Home_Component/data";
+
+interface Cards extends cardWord {
+  otherbtn: boolean;
+}
+
+// interface hi {
+//   id: number;
+//   word: string;
+//   name: string;
+//   img: any;
+//   otherbtn: boolean;
+// }
+
+// interface cardWord {
+//   otherbtn: boolean;
+// }
+
+const Card = ({ word, img, name, otherbtn }: Cards) => {
   const navigate = useNavigate();
   const navigateClick = () => {
     navigate("/recommend-list", { state: { list: name, otherbtn, word } });

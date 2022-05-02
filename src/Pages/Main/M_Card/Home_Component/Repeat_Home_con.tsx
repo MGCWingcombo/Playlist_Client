@@ -2,14 +2,15 @@ import React from "react";
 import { cardWord1, cardWord2, cardWord3 } from "./data";
 import { Cardlist, Contents } from "../../Style";
 import Card from "../../../../Components/MainCard/Card";
+
 const Repeat_Home_con = () => {
   const word1 = cardWord1.map((list) => {
     return (
       <Card
         key={list.id}
         word={list.word}
-        img={list.img}
         name={list.name}
+        img={list.img}
         otherbtn={true}
       />
     );
@@ -19,8 +20,8 @@ const Repeat_Home_con = () => {
       <Card
         key={list.id}
         word={list.word}
-        img={list.img}
         name={list.name}
+        img={list.img}
         otherbtn={true}
       />
     );
@@ -30,8 +31,8 @@ const Repeat_Home_con = () => {
       <Card
         key={list.id}
         word={list.word}
-        img={list.img}
         name={list.name}
+        img={list.img}
         otherbtn={true}
       />
     );

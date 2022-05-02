@@ -1,5 +1,5 @@
-interface cardWord {
-  id: number;
+export interface cardWord {
+  id?: number;
   word: string;
   name: string;
   img: any;
