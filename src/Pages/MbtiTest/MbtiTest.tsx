@@ -4,7 +4,9 @@ import { useNavigate } from "react-router-dom";
 
 const MbtiTest = () => {
   const navigate = useNavigate();
-  const navigateClick = () => {
+  const navigateClick:
+    | React.MouseEventHandler<HTMLDivElement>
+    | undefined = () => {
     navigate("/mbti-test");
   };
 

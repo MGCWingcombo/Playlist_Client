@@ -117,7 +117,7 @@ const ChoiceBtn = ({ number, getNumber }: ChoiceBtn) => {
   }, []);
 
   const navigate = useNavigate();
-  const navigateClick = (mbtiword: string[], otherbtn: boolean) => {
+  const navigateClick = (mbtiword: string, otherbtn: boolean) => {
     navigate("/mbti-result", { state: { list: mbtiword, otherbtn } });
   };
 
@@ -201,15 +201,16 @@ const ChoiceBtn = ({ number, getNumber }: ChoiceBtn) => {
           } else if (JP <= -1) {
             forceMbti = "P";
           }
-          const mbti = [firstMbti + secondMbti + thirdMbti + forceMbti];
-          console.log(mbti[0]);
-          const otherbtn = false;
-          navigateClick(mbti, otherbtn);
+          const mbtiword: string =
+            firstMbti + secondMbti + thirdMbti + forceMbti;
+          console.log(mbtiword);
+          const otherbtn: boolean = false;
+          navigateClick(mbtiword, otherbtn);
 
-          console.log("A = ", IE);
-          console.log("B = ", NS);
-          console.log("C = ", FT);
-          console.log("D = ", JP);
+          console.log("A = ", firstMbti);
+          console.log("B = ", secondMbti);
+          console.log("C = ", thirdMbti);
+          console.log("D = ", forceMbti);
           break;
         }
         default: {
@@ -285,15 +286,14 @@ const ChoiceBtn = ({ number, getNumber }: ChoiceBtn) => {
           } else if (JP <= -1) {
             forceMbti = "P";
           }
-          const mbtiword: string[] = [
-            firstMbti + secondMbti + thirdMbti + forceMbti,
-          ];
+          const mbtiword: string =
+            firstMbti + secondMbti + thirdMbti + forceMbti;
           const otherbtn: boolean = false;
           navigateClick(mbtiword, otherbtn);
-          console.log("A = ", IE);
-          console.log("B = ", NS);
-          console.log("C = ", FT);
-          console.log("D = ", JP);
+          console.log("A = ", firstMbti);
+          console.log("B = ", secondMbti);
+          console.log("C = ", thirdMbti);
+          console.log("D = ", forceMbti);
           break;
         }
         default: {
