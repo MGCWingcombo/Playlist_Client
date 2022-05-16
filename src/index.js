@@ -5,8 +5,9 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 const rootNode = document.getElementById("root");
-
-ReactDOM.createRoot(rootNode).render(
+if (!rootNode) throw new Error("Failed to find the root element");
+const root = ReactDOM.createRoot(rootNode);
+root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
