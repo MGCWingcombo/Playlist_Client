@@ -10,9 +10,9 @@ import GlobalStyle from "./Styles/GlobalStyle";
 
 const App = () => {
   return (
-    <div>
-      <GlobalStyle />
+    <>
       <BrowserRouter>
+        <GlobalStyle />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/mbti" element={<MbtiTest />} />
@@ -21,7 +21,7 @@ const App = () => {
           <Route path="recommend-list" element={<Endmbti />} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   );
 };
 
