@@ -11,7 +11,7 @@
 
 ### Skill
 - **React**
-- **Javascript** (Typescript로 마이그레이션중)
+- **Javascript & TypeScript**
 - **Styled-Components**
 
 ## Activity
