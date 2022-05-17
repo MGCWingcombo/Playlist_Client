@@ -1,8 +1,10 @@
 import React from "react";
 import * as S from "./Style";
 import { useNavigate } from "react-router-dom";
-
-const Mobheader = ({ prevBtn }: any) => {
+interface PrevBtn {
+  prevBtn: boolean;
+}
+const Mobheader = ({ prevBtn }: PrevBtn) => {
   const navigate = useNavigate();
 
   return (
