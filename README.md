@@ -11,7 +11,7 @@
 
 ### Skill
 - **React**
-- **Javascript & TypeScript **
+- **Javascript & TypeScript**
 - **Styled-Components**
 
 ## Activity
