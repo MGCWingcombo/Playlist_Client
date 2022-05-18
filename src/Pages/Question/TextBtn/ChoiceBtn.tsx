@@ -133,7 +133,7 @@ const ChoiceBtn = ({ number, getNumber }: ChoiceBtnType) => {
   ) => {
     const btnids: HTMLButtonElement = event.target as HTMLButtonElement;
     getNumber((number: number) => number + 1);
-    console.log(btnids);
+
     if (btnids.id === "topbtn") {
       switch (alpha) {
         case 1: {
