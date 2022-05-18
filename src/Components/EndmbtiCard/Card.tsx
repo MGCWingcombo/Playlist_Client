@@ -1,7 +1,11 @@
 import React from "react";
 import * as S from "./Style";
 
-const Card = ({ keys }: any) => {
+interface CardKeys {
+  keys: { url: string; urlImg: any; Music: string; Artist: string };
+}
+
+const Card = ({ keys }: CardKeys) => {
   return (
     <>
       <S.Card>

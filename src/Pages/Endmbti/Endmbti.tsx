@@ -8,7 +8,7 @@ import Mobheader from "../../Components/Mobile_header/Mobheader";
 const API_KEY = process.env.REACT_APP_PLAYLIST_KEY;
 
 const Endmbti = () => {
-  const [mbtis, setMbtis] = useState<string>("");
+  const [mbtis, setMbtis] = useState<any>("");
   const [number, setNumber] = useState<number>(1);
   const location: any = useLocation();
 
@@ -24,6 +24,7 @@ const Endmbti = () => {
         const res = await axios(url);
         setMbtis(res.data.data);
         console.log(res.data.data);
+        console.log("res : ", res);
       } catch (error) {
         console.error(error);
       }
