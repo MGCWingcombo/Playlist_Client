@@ -102,12 +102,12 @@ let secondMbti: string = "";
 let thirdMbti: string = "";
 let forceMbti: string = "";
 
-interface ChoiceBtn {
+interface ChoiceBtnType {
   number: number;
   getNumber: any;
 }
 
-const ChoiceBtn = ({ number, getNumber }: ChoiceBtn) => {
+const ChoiceBtn = ({ number, getNumber }: ChoiceBtnType) => {
   useEffect(() => {
     console.log("ChoiceBtn");
     IE = 0;
@@ -132,7 +132,7 @@ const ChoiceBtn = ({ number, getNumber }: ChoiceBtn) => {
     const btnids: string = btnid.target.id;
     getNumber((number: number) => number + 1);
     console.log(btnids);
-    if (btnids == "topbtn") {
+    if (btnids === "topbtn") {
       switch (alpha) {
         case 1: {
           IE += 1;
@@ -217,7 +217,7 @@ const ChoiceBtn = ({ number, getNumber }: ChoiceBtn) => {
           return null;
         }
       }
-    } else if (btnids == "bottombtn") {
+    } else if (btnids === "bottombtn") {
       switch (alpha) {
         case 1: {
           IE -= 1;

@@ -1,12 +1,12 @@
-interface size {
+interface Size {
   mobile: string;
 }
 
-const size: size = {
+const size: Size = {
   mobile: "600px",
 };
 
-const device: size = {
+const device: Size = {
   mobile: `(max-width: ${size.mobile})`,
 };
 

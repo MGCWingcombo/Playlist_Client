@@ -5,7 +5,7 @@ const Card = ({ keys }: any) => {
   return (
     <>
       <S.Card>
-        <a href={keys.url} target="_blank">
+        <a href={keys.url} target="_blank" rel="noreferrer">
           <S.Img url={keys.urlImg}>
             <div></div>
           </S.Img>
