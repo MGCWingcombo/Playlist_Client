@@ -128,11 +128,13 @@ const ChoiceBtn = ({ number, getNumber }: ChoiceBtnType) => {
 
   setTimeout(() => setAlpha(number));
 
-  const click: React.MouseEventHandler<HTMLButtonElement> = (btnid: any) => {
-    const btnids: string = btnid.target.id;
+  const click: React.MouseEventHandler<HTMLButtonElement> = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    const btnids: HTMLButtonElement = event.target as HTMLButtonElement;
     getNumber((number: number) => number + 1);
     console.log(btnids);
-    if (btnids === "topbtn") {
+    if (btnids.id === "topbtn") {
       switch (alpha) {
         case 1: {
           IE += 1;
@@ -217,7 +219,7 @@ const ChoiceBtn = ({ number, getNumber }: ChoiceBtnType) => {
           return null;
         }
       }
-    } else if (btnids === "bottombtn") {
+    } else if (btnids.id === "bottombtn") {
       switch (alpha) {
         case 1: {
           IE -= 1;
