@@ -7,6 +7,7 @@ import Addlist from "./Pages/Addlist/Addlist";
 import Endmbti from "./Pages/Endmbti/Endmbti";
 import Question from "./Pages/Question/Question";
 import GlobalStyle from "./Styles/GlobalStyle";
+import GlobalFont from "./Styles/Font";
 
 const App = () => {
   return (
