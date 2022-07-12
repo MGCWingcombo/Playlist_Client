@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import ChoiceBtn from "./TextBtn/ChoiceBtn";
 import * as S from "./Style";
 import Mobheader from "../../Components/Mobile_header/Mobheader";
+import { useRecoilState } from "recoil";
+import { ChoiceNumber } from "../../Atoms/Atom";
 
 const nextText = (number: number) => {
   switch (number) {
@@ -81,13 +83,9 @@ const nextText = (number: number) => {
 };
 
 const Question = () => {
-  const [number, setNumber] = useState<number>(1);
+  const [number] = useRecoilState<number>(ChoiceNumber);
 
   const ShowState = nextText(number);
-  const getNumber = () => {
-    console.log("hi");
-    setNumber((number) => number + 1);
-  };
 
   return (
     <S.Con>
@@ -101,7 +99,7 @@ const Question = () => {
         <S.Questions>{ShowState}</S.Questions>
 
         <S.Btns>
-          <ChoiceBtn getNumber={getNumber} number={number} />
+          <ChoiceBtn number={number} />
         </S.Btns>
       </S.Content>
     </S.Con>

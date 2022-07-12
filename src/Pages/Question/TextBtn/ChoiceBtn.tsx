@@ -1,6 +1,8 @@
 import React, { useState, useMemo, useEffect } from "react";
+import { useSetRecoilState } from "recoil";
 import { useNavigate } from "react-router-dom";
 import * as S from "./TextBtnStyle";
+import { ChoiceNumber } from "../../../Atoms/Atom";
 
 const BtnText2 = (number: number): string | null => {
   console.log("mo");
@@ -104,10 +106,11 @@ let forceMbti: string = "";
 
 interface ChoiceBtnType {
   number: number;
-  getNumber: any;
 }
 
-const ChoiceBtn = ({ number, getNumber }: ChoiceBtnType) => {
+const ChoiceBtn = ({ number }: ChoiceBtnType) => {
+  const setNumber = useSetRecoilState(ChoiceNumber);
+
   useEffect(() => {
     console.log("ChoiceBtn");
     IE = 0;
@@ -134,7 +137,8 @@ const ChoiceBtn = ({ number, getNumber }: ChoiceBtnType) => {
   ) => {
     const btnids: HTMLButtonElement = event.target as HTMLButtonElement;
 
-    getNumber();
+    setNumber((number) => number + 1);
+    // getNumber();
 
     if (btnids.id === "topbtn") {
       switch (alpha) {
