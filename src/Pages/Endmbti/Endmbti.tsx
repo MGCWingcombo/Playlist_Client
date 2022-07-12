@@ -4,11 +4,13 @@ import { useLocation } from "react-router-dom";
 import * as S from "./Style";
 import Card from "../../Components/EndmbtiCard/Card";
 import Mobheader from "../../Components/Mobile_header/Mobheader";
-
+import { useRecoilState, useSetRecoilState } from "recoil";
+import { EndmbtiState } from "../../Atoms/Atom";
+import EndmbtiData from "../../Components/EndmbtiData/EndmbtiData";
 const API_KEY = process.env.REACT_APP_PLAYLIST_KEY;
 
 const Endmbti = () => {
-  const [mbtis, setMbtis] = useState<any>("");
+  const [mbtis, setMbtis] = useRecoilState(EndmbtiState);
   const [number, setNumber] = useState<number>(1);
   const location: any = useLocation();
 
@@ -84,58 +86,7 @@ const Endmbti = () => {
             </S.Ment>
             {mbtis && <S.Button onClick={dataplus}>더보기</S.Button>}
           </S.Top>
-          <S.Data>
-            <div className="mobileview">
-              <S.Contents>
-                <div>
-                  {mbtis && <Card keys={mbtis[0]} />}
-                  {mbtis && <Card keys={mbtis[1]} />}
-                  {mbtis && <Card keys={mbtis[2]} />}
-                  {mbtis && <Card keys={mbtis[3]} />}
-                </div>
-              </S.Contents>
-              <S.Contents>
-                <div>
-                  {mbtis && <Card keys={mbtis[4]} />}
-                  {mbtis && <Card keys={mbtis[5]} />}
-                  {mbtis && <Card keys={mbtis[6]} />}
-                  {mbtis && <Card keys={mbtis[7]} />}
-                </div>
-              </S.Contents>
-            </div>
-            <S.Contents className="one">
-              <div id="first_data" className="first_data">
-                {mbtis && <Card keys={mbtis[8]} />}
-                {mbtis && <Card keys={mbtis[9]} />}
-                {mbtis && <Card keys={mbtis[10]} />}
-                {mbtis && <Card keys={mbtis[11]} />}
-              </div>
-            </S.Contents>
-            <S.Contents className="two">
-              <div id="second_data" className="second_data">
-                {mbtis && <Card keys={mbtis[12]} />}
-                {mbtis && <Card keys={mbtis[13]} />}
-                {mbtis && <Card keys={mbtis[14]} />}
-                {mbtis && <Card keys={mbtis[15]} />}
-              </div>
-            </S.Contents>
-            <S.Contents className="three">
-              <div id="third_data" className="third_data">
-                {mbtis && <Card keys={mbtis[16]} />}
-                {mbtis && <Card keys={mbtis[17]} />}
-                {mbtis && <Card keys={mbtis[18]} />}
-                {mbtis && <Card keys={mbtis[19]} />}
-              </div>
-            </S.Contents>
-            <S.Contents className="force">
-              <div id="force_data" className="force_data">
-                {mbtis && <Card keys={mbtis[20]} />}
-                {mbtis && <Card keys={mbtis[21]} />}
-                {mbtis && <Card keys={mbtis[22]} />}
-                {mbtis && <Card keys={mbtis[23]} />}
-              </div>
-            </S.Contents>
-          </S.Data>
+          <EndmbtiData />
           <a className="btn" href="/">
             <S.Btn fontcolor="#6578a7" btncolor="#ffffff" bordercolor="#6578a7">
               {otherbtn ? "다른 플레이리스트 보러가기" : "MBTI 검사 다시하기"}

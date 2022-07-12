@@ -51,25 +51,6 @@ export const Top = styled.div`
   }
 `;
 
-export const Data = styled.div`
-  overflow-y: auto;
-  overflow-x: hidden;
-  border-radius: 20px;
-  height: 760px;
-
-  @media ${device.mobile} {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    width: 100vw;
-    height: auto;
-    .mobileview {
-      display: flex;
-      padding: 0 35px;
-    }
-  }
-`;
-
 export const Ment = styled.p`
   font-family: "Prompt";
   font-size: 1.9rem;
@@ -134,23 +115,5 @@ export const Btn = styled.button<BtnSt>`
     border-radius: 5px;
     font-size: 1.2rem;
     margin-top: 40px;
-  }
-`;
-
-export const Contents = styled.div`
-  div {
-    display: flex;
-  }
-  .first_data {
-    display: none;
-  }
-  .second_data {
-    display: none;
-  }
-  .third_data {
-    display: none;
-  }
-  .force_data {
-    display: none;
   }
 `;
