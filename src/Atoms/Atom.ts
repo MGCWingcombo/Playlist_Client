@@ -1,6 +1,6 @@
 import { atom } from "recoil";
 
-export const ChoiceNumber = atom<number>({
-  key: "ChoiceNumber",
+export const QuestionNumber = atom<number>({
+  key: "QuestionNumber",
   default: 1,
 });

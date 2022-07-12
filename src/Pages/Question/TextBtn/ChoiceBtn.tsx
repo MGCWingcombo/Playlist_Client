@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect } from "react";
 import { useSetRecoilState } from "recoil";
 import { useNavigate } from "react-router-dom";
 import * as S from "./TextBtnStyle";
-import { ChoiceNumber } from "../../../Atoms/Atom";
+import { QuestionNumber } from "../../../Atoms/Atom";
 
 const BtnText2 = (number: number): string | null => {
   console.log("mo");
@@ -109,7 +109,7 @@ interface ChoiceBtnType {
 }
 
 const ChoiceBtn = ({ number }: ChoiceBtnType) => {
-  const setNumber = useSetRecoilState(ChoiceNumber);
+  const setNumber = useSetRecoilState(QuestionNumber);
 
   useEffect(() => {
     console.log("ChoiceBtn");

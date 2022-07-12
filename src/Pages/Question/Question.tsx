@@ -3,7 +3,7 @@ import ChoiceBtn from "./TextBtn/ChoiceBtn";
 import * as S from "./Style";
 import Mobheader from "../../Components/Mobile_header/Mobheader";
 import { useRecoilState } from "recoil";
-import { ChoiceNumber } from "../../Atoms/Atom";
+import { QuestionNumber } from "../../Atoms/Atom";
 
 const nextText = (number: number) => {
   switch (number) {
@@ -83,7 +83,7 @@ const nextText = (number: number) => {
 };
 
 const Question = () => {
-  const [number] = useRecoilState<number>(ChoiceNumber);
+  const [number] = useRecoilState<number>(QuestionNumber);
 
   const ShowState = nextText(number);
 
