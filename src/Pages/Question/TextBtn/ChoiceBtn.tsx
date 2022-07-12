@@ -112,6 +112,7 @@ const ChoiceBtn = ({ number }: ChoiceBtnType) => {
   const setNumber = useSetRecoilState(QuestionNumber);
 
   useEffect(() => {
+    setNumber(1);
     console.log("ChoiceBtn");
     IE = 0;
     NS = 0;
@@ -127,21 +128,15 @@ const ChoiceBtn = ({ number }: ChoiceBtnType) => {
   const TextBtntop: any = useMemo(() => BtnText(number), [number]);
   const TextBtnbottom: any = useMemo(() => BtnText2(number), [number]);
 
-  const [alpha, setAlpha] = useState<number>();
-
-  setTimeout(() => setAlpha(number));
-  // setAlpha(number);
-
   const click: React.MouseEventHandler<HTMLButtonElement> = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     const btnids: HTMLButtonElement = event.target as HTMLButtonElement;
 
     setNumber((number) => number + 1);
-    // getNumber();
 
     if (btnids.id === "topbtn") {
-      switch (alpha) {
+      switch (number) {
         case 1: {
           IE += 1;
           break;
@@ -226,7 +221,7 @@ const ChoiceBtn = ({ number }: ChoiceBtnType) => {
         }
       }
     } else if (btnids.id === "bottombtn") {
-      switch (alpha) {
+      switch (number) {
         case 1: {
           IE -= 1;
           break;
