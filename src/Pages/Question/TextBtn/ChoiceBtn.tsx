@@ -5,7 +5,6 @@ import * as S from "./TextBtnStyle";
 import { QuestionNumber } from "../../../Atoms/Atom";
 
 const BtnText2 = (number: number): string | null => {
-  console.log("mo");
   switch (number) {
     case 1: {
       return "사람들과 만나서 즐거운 시간을 보낸다.";
@@ -50,7 +49,6 @@ const BtnText2 = (number: number): string | null => {
 };
 
 const BtnText = (number: number): string | null => {
-  console.log("min");
   switch (number) {
     case 1: {
       return "집에서 혼자만의 시간을 가진다.";
@@ -184,26 +182,14 @@ const ChoiceBtn = ({ number }: ChoiceBtnType) => {
         case 12: {
           FT += 1;
 
-          if (IE >= 1) {
-            firstMbti = "I";
-          } else if (IE <= -1) {
-            firstMbti = "E";
-          }
-          if (NS >= 1) {
-            secondMbti = "S";
-          } else if (NS <= -1) {
-            secondMbti = "N";
-          }
-          if (FT >= 1) {
-            thirdMbti = "F";
-          } else if (FT <= -1) {
-            thirdMbti = "T";
-          }
-          if (JP >= 1) {
-            forceMbti = "J";
-          } else if (JP <= -1) {
-            forceMbti = "P";
-          }
+          IE >= 1 ? (firstMbti = "I") : (firstMbti = "E");
+
+          NS >= 1 ? (secondMbti = "S") : (secondMbti = "N");
+
+          FT >= 1 ? (thirdMbti = "F") : (thirdMbti = "T");
+
+          JP >= 1 ? (forceMbti = "J") : (forceMbti = "P");
+
           const mbtiword: string =
             firstMbti + secondMbti + thirdMbti + forceMbti;
           console.log(mbtiword);
@@ -269,26 +255,13 @@ const ChoiceBtn = ({ number }: ChoiceBtnType) => {
         case 12: {
           FT -= 1;
 
-          if (IE >= 1) {
-            firstMbti = "I";
-          } else if (IE <= -1) {
-            firstMbti = "E";
-          }
-          if (NS >= 1) {
-            secondMbti = "S";
-          } else if (NS <= -1) {
-            secondMbti = "N";
-          }
-          if (FT >= 1) {
-            thirdMbti = "F";
-          } else if (FT <= -1) {
-            thirdMbti = "T";
-          }
-          if (JP >= 1) {
-            forceMbti = "J";
-          } else if (JP <= -1) {
-            forceMbti = "P";
-          }
+          IE >= 1 ? (firstMbti = "I") : (firstMbti = "E");
+
+          NS >= 1 ? (secondMbti = "S") : (secondMbti = "N");
+
+          FT >= 1 ? (thirdMbti = "F") : (thirdMbti = "T");
+
+          JP >= 1 ? (forceMbti = "J") : (forceMbti = "P");
           const mbtiword: string =
             firstMbti + secondMbti + thirdMbti + forceMbti;
           const otherbtn: boolean = false;
