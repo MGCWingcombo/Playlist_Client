@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import * as S from "./TextBtnStyle";
 
 const BtnText2 = (number: number): string | null => {
-  // console.log("mo");
+  console.log("mo");
   switch (number) {
     case 1: {
       return "사람들과 만나서 즐거운 시간을 보낸다.";
@@ -48,7 +48,7 @@ const BtnText2 = (number: number): string | null => {
 };
 
 const BtnText = (number: number): string | null => {
-  // console.log("min");
+  console.log("min");
   switch (number) {
     case 1: {
       return "집에서 혼자만의 시간을 가진다.";
@@ -127,12 +127,14 @@ const ChoiceBtn = ({ number, getNumber }: ChoiceBtnType) => {
   const [alpha, setAlpha] = useState<number>();
 
   setTimeout(() => setAlpha(number));
+  // setAlpha(number);
 
   const click: React.MouseEventHandler<HTMLButtonElement> = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     const btnids: HTMLButtonElement = event.target as HTMLButtonElement;
-    getNumber((number: number) => number + 1);
+
+    getNumber();
 
     if (btnids.id === "topbtn") {
       switch (alpha) {
